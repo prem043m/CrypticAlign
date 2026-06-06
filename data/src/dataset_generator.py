@@ -20,8 +20,8 @@ LOCATIONS = [
     "Kolkata",
     "Ahmedabad"
 ]
-PROFESSIONS = [
 
+PROFESSIONS = [
     "Data Scientist",
     "ML Engineer",
     "AI Engineer",
@@ -31,27 +31,135 @@ PROFESSIONS = [
     "DevOps Engineer",
     "Cloud Engineer",
     "Cybersecurity Analyst",
-
     "Business Analyst",
     "Product Manager",
     "Project Manager",
     "Consultant",
-
     "Financial Analyst",
     "Investment Advisor",
     "Accountant",
-
     "Doctor",
     "Nurse",
     "Healthcare Analyst",
-
     "UI/UX Designer",
     "Graphic Designer",
     "Content Writer",
     "Marketing Specialist"
 ]
-INTERESTS = [
 
+PROFESSION_GROUPS = {
+    "TECH": [
+        "Data Scientist",
+        "ML Engineer",
+        "AI Engineer",
+        "Backend Developer",
+        "Frontend Developer",
+        "Full Stack Developer",
+        "DevOps Engineer",
+        "Cloud Engineer",
+        "Cybersecurity Analyst"
+    ],
+
+    "BUSINESS": [
+        "Business Analyst",
+        "Product Manager",
+        "Project Manager",
+        "Consultant"
+    ],
+
+    "FINANCE": [
+        "Financial Analyst",
+        "Investment Advisor",
+        "Accountant"
+    ],
+
+    "HEALTHCARE": [
+        "Doctor",
+        "Nurse",
+        "Healthcare Analyst"
+    ],
+
+    "CREATIVE": [
+        "UI/UX Designer",
+        "Graphic Designer",
+        "Content Writer",
+        "Marketing Specialist"
+    ]
+}
+
+# Enhanced Education by Group
+EDUCATION_BY_GROUP = {
+    "TECH": [
+        "B.Tech Computer Science",
+        "B.Tech IT",
+        "MCA",
+        "M.Tech AI",
+        "B.Tech Electronics",
+        "M.Tech Data Science"
+    ],
+
+    "BUSINESS": [
+        "MBA",
+        "BBA",
+        "Management Studies",
+        "B.Com",
+        "MBA Operations"
+    ],
+
+    "FINANCE": [
+        "B.Com",
+        "CA",
+        "MBA Finance",
+        "CFA",
+        "B.Sc Economics"
+    ],
+
+    "HEALTHCARE": [
+        "MBBS",
+        "BDS",
+        "B.Sc Nursing",
+        "MPH",
+        "M.Sc Public Health"
+    ],
+
+    "CREATIVE": [
+        "BFA Design",
+        "Fine Arts",
+        "Mass Communication",
+        "Graphic Design Diploma",
+        "UX Certification"
+    ]
+}
+
+# Networking Intents
+NETWORKING_INTENTS = [
+    "Find Mentor",
+    "Find Mentee",
+    "Career Growth",
+    "Startup Partner",
+    "Professional Networking",
+    "Research Collaboration",
+    "Team Building",
+    "Knowledge Sharing"
+]
+
+# Personality Traits
+PERSONALITY_TRAITS = [
+    "Leadership",
+    "Creative",
+    "Analytical",
+    "Collaborative",
+    "Innovative",
+    "Detail-Oriented",
+    "Strategic",
+    "Adaptable",
+    "Problem Solver",
+    "Communication",
+    "Empathetic",
+    "Visionary"
+]
+
+INTERESTS = [
     "AI",
     "Machine Learning",
     "Fitness",
@@ -69,11 +177,13 @@ INTERESTS = [
     "Writing",
     "Data Science"
 ]
+
 PROFESSION_SKILLS = {
     "Data Scientist": [
         "Python", "Machine Learning",
         "SQL", "Statistics",
-        "Data Analysis"
+        "Data Analysis", "Tableau",
+        "A/B Testing"
     ],
 
     "ML Engineer": [
@@ -81,7 +191,9 @@ PROFESSION_SKILLS = {
         "Deep Learning",
         "TensorFlow",
         "PyTorch",
-        "AWS"
+        "AWS",
+        "Model Deployment",
+        "Computer Vision"
     ],
 
     "AI Engineer": [
@@ -89,7 +201,9 @@ PROFESSION_SKILLS = {
         "LLMs",
         "NLP",
         "Deep Learning",
-        "Vector Databases"
+        "Vector Databases",
+        "Prompt Engineering",
+        "Transformers"
     ],
 
     "Backend Developer": [
@@ -97,7 +211,9 @@ PROFESSION_SKILLS = {
         "SQL",
         "Docker",
         "API Development",
-        "System Design"
+        "System Design",
+        "Microservices",
+        "MongoDB"
     ],
 
     "Frontend Developer": [
@@ -105,7 +221,29 @@ PROFESSION_SKILLS = {
         "JavaScript",
         "HTML",
         "CSS",
-        "UI Design"
+        "UI Design",
+        "TypeScript",
+        "Redux"
+    ],
+
+    "DevOps Engineer": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "CI/CD",
+        "Linux",
+        "Terraform",
+        "Jenkins"
+    ],
+
+    "Cloud Engineer": [
+        "AWS",
+        "Azure",
+        "Cloud Architecture",
+        "Infrastructure",
+        "DevOps",
+        "Networking",
+        "Security"
     ],
 
     "Cybersecurity Analyst": [
@@ -113,7 +251,18 @@ PROFESSION_SKILLS = {
         "Network Security",
         "SIEM",
         "Threat Analysis",
-        "Linux"
+        "Linux",
+        "Penetration Testing",
+        "Incident Response"
+    ],
+
+    "Product Manager": [
+        "Product Strategy",
+        "Data Analysis",
+        "Leadership",
+        "User Research",
+        "Roadmap Planning",
+        "Analytics"
     ],
 
     "Doctor": [
@@ -129,12 +278,21 @@ PROFESSION_SKILLS = {
         "Excel",
         "Risk Analysis",
         "Forecasting",
-        "Business Intelligence"
+        "Business Intelligence",
+        "Financial Modeling"
+    ],
+
+    "UI/UX Designer": [
+        "UI Design",
+        "UX Research",
+        "Figma",
+        "Prototyping",
+        "User Testing",
+        "Design Systems"
     ]
 }
 
 PROFESSION_INTERESTS = {
-
     "Data Scientist": [
         "AI",
         "Machine Learning",
@@ -147,35 +305,48 @@ PROFESSION_INTERESTS = {
         "AI",
         "Machine Learning",
         "Startups",
-        "Data Science"
+        "Data Science",
+        "Gaming"
     ],
 
     "AI Engineer": [
         "AI",
         "Machine Learning",
         "Startups",
-        "Gaming"
+        "Gaming",
+        "Research"
     ],
 
     "Doctor": [
         "Healthcare",
         "Teaching",
         "Reading",
-        "Fitness"
+        "Fitness",
+        "Mentoring"
     ],
 
     "Financial Analyst": [
         "Finance",
         "Public Speaking",
         "Reading",
-        "Writing"
+        "Writing",
+        "Teaching"
     ],
 
     "Graphic Designer": [
         "Photography",
         "Music",
         "Travel",
-        "Writing"
+        "Writing",
+        "Design"
+    ],
+
+    "Product Manager": [
+        "Startups",
+        "Leadership",
+        "Technology",
+        "Reading",
+        "Mentoring"
     ]
 }
 
@@ -187,20 +358,18 @@ ALL_MBTI = [
 ]
 
 MBTI_MAPPING = {
-
     "Data Scientist": ["INTJ","INTP","ISTJ"],
     "ML Engineer": ["INTJ","INTP","ENTJ"],
     "AI Engineer": ["INTJ","INTP","ENTJ"],
-
     "Product Manager": ["ENTJ","ENFJ","ESTJ"],
     "Project Manager": ["ENTJ","ESTJ"],
-
     "Graphic Designer": ["INFP","ENFP","ISFP"],
     "Content Writer": ["INFP","ENFP"],
-    "UI/UX Designer": ["INFP","ENFP","ISFP"]
+    "UI/UX Designer": ["INFP","ENFP","ISFP"],
+    "Doctor": ["ISFJ","INFJ","ESFJ"]
 }
-CAREER_GOAL_WEIGHTS = {
 
+CAREER_GOAL_WEIGHTS = {
     "Data Scientist": {
         "AI Research": 45,
         "Data Analytics": 40,
@@ -224,6 +393,12 @@ CAREER_GOAL_WEIGHTS = {
         "Startup Founder": 25
     },
 
+    "Frontend Developer": {
+        "Startup Founder": 40,
+        "Leadership": 35,
+        "Product Management": 25
+    },
+
     "Cybersecurity Analyst": {
         "Cybersecurity": 70,
         "Leadership": 30
@@ -237,10 +412,21 @@ CAREER_GOAL_WEIGHTS = {
     "Doctor": {
         "Healthcare Innovation": 70,
         "Leadership": 30
+    },
+
+    "Product Manager": {
+        "Startup Founder": 50,
+        "Leadership": 50
+    },
+
+    "UI/UX Designer": {
+        "Startup Founder": 40,
+        "Leadership": 35,
+        "Design Leadership": 25
     }
 }
-CAREER_GOALS = [
 
+CAREER_GOALS = [
     "Leadership",
     "Startup Founder",
     "AI Research",
@@ -249,7 +435,8 @@ CAREER_GOALS = [
     "Cybersecurity",
     "Product Management",
     "Financial Growth",
-    "Healthcare Innovation"
+    "Healthcare Innovation",
+    "Design Leadership"
 ]
 # -----------------------------
 # TEXT TEMPLATES
@@ -258,19 +445,35 @@ CAREER_GOALS = [
 SUMMARY_TEMPLATES = [
     """{profession} with {experience} years of experience in the industry.
 Skilled in {skill1}, {skill2}, and {skill3}.
-Passionate about innovation and continuous learning.""",
+Passionate about innovation and continuous learning.
+Education: {education}""",
 
     """Experienced {profession} specializing in modern solutions.
 Strong expertise in {skill1} and {skill2}.
-Interested in building impactful products."""
+Interested in building impactful products.
+Education: {education}""",
+
+    """Dedicated {profession} with {experience} years of hands-on experience.
+Expert in {skill1}, {skill2}, {skill3}.
+Seeking {networking_intent} opportunities.
+Education: {education}"""
 ]
 
 ABOUT_TEMPLATES = [
     """I enjoy solving real-world problems and collaborating with teams.
-Outside work I enjoy {interest1} and {interest2}.""",
+Outside work I enjoy {interest1} and {interest2}.
+Personality: {trait1}, {trait2}.
+Networking Goal: {networking_intent}""",
 
     """Curious and creative thinker who values lifelong learning.
-I enjoy {interest1}, {interest2}, and mentoring others."""
+I enjoy {interest1}, {interest2}, and mentoring others.
+Traits: {trait1}, {trait2}, {trait3}.
+Looking for: {networking_intent}""",
+
+    """Passionate about making an impact in {career_goal}.
+I'm {trait1} and {trait2}.
+Interested in {interest1}, {interest2}.
+Networking Intent: {networking_intent}"""
 ]
 
 SKILLS = [
@@ -380,7 +583,27 @@ def generate_user(user_num):
         )
     )
 
-    # Professional Summary
+    # NEW: Education based on profession
+    group = None
+    for g, profs in PROFESSION_GROUPS.items():
+        if profession in profs:
+            group = g
+            break
+    if group is None:
+        group = "TECH"
+    
+    education = random.choice(
+        EDUCATION_BY_GROUP.get(group, EDUCATION_BY_GROUP["TECH"])
+    )
+    
+    # NEW: Personality Traits
+    num_traits = random.randint(2, 3)
+    traits = random.sample(PERSONALITY_TRAITS, num_traits)
+    
+    # NEW: Networking Intent
+    networking_intent = random.choice(NETWORKING_INTENTS)
+
+    # Professional Summary (Enhanced)
     summary = random.choice(
         SUMMARY_TEMPLATES
     ).format(
@@ -388,19 +611,22 @@ def generate_user(user_num):
         experience=experience,
         skill1=skills[0],
         skill2=skills[1],
-        skill3=skills[2]
+        skill3=skills[2],
+        education=education,
+        networking_intent=networking_intent
     )
 
-    summary += (
-        f"\nCareer Goal: {career_goal}."
-    )
-
-    # About Me
+    # About Me (Enhanced)
     about = random.choice(
         ABOUT_TEMPLATES
     ).format(
         interest1=interests[0],
-        interest2=interests[1]
+        interest2=interests[1],
+        trait1=traits[0],
+        trait2=traits[1],
+        trait3=traits[2] if len(traits) > 2 else traits[1],
+        networking_intent=networking_intent,
+        career_goal=career_goal
     )
 
     return {
@@ -425,20 +651,32 @@ def generate_user(user_num):
         "experience_years":
             experience,
 
+        "education":
+            education,
+
+        "skills":
+            ",".join(skills),
+
+        "mbti":
+            mbti,
+
+        "traits":
+            ",".join(traits),
+
         "career_goal":
             career_goal,
+
+        "networking_intent":
+            networking_intent,
+
+        "interests":
+            ",".join(interests),
 
         "professional_summary":
             summary,
 
         "about_me":
-            about,
-
-        "mbti":
-            mbti,
-
-        "interests":
-            ",".join(interests)
+            about
     }
 
 def generate_users():
@@ -451,8 +689,14 @@ def generate_users():
     users_df = pd.DataFrame(users)
 
     users_df.to_csv(
-        "users.csv",
+        "../users.csv",
         index=False
     )
 
     return users_df
+
+
+if __name__ == "__main__":
+    print("Generating synthetic user dataset...")
+    df = generate_users()
+    print(f"[SUCCESS] Generated {len(df)} users in ../users.csv")

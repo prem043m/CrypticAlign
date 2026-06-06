@@ -52,6 +52,36 @@ class TFIDFEncoder:
             + self.users_df[
                 "interests"
             ].fillna("").str.replace(",", " ")
+            
+            + " "
+            
+            + self.users_df[
+                "profession"
+            ].fillna("")
+            
+            + " "
+            
+            + self.users_df[
+                "skills"
+            ].fillna("").str.replace(",", " ")
+            
+            + " "
+            
+            + self.users_df[
+                "education"
+            ].fillna("")
+            
+            + " "
+            
+            + self.users_df[
+                "traits"
+            ].fillna("").str.replace(",", " ")
+            
+            + " "
+            
+            + self.users_df[
+                "networking_intent"
+            ].fillna("")
         )
 
         self.users_df[

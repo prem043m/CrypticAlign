@@ -87,7 +87,7 @@ class SimilarityEngine:
                     "location":
                         self.users_df.iloc[i]["location"],
                     
-                    "Experience":
+                    "experience":
                         self.users_df.iloc[i]["experience_years"],
                     "score":
                         round(score * 100, 2)
