@@ -1,4 +1,4 @@
-# Intelligent Recommender System
+# CrypticAlign : Intelligent Recommender System
 
 An intelligent recommendation engine that uses TF-IDF embeddings and similarity matching to provide personalized recommendations. The system processes user data, generates embeddings for text content, and matches users with relevant items based on MBTI profiling and similarity scores.
 
