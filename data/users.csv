@@ -1,0 +1,1501 @@
+user_id,name,age,location,profession,experience_years,career_goal,professional_summary,about_me,mbti,interests
+U001,Warhi Shroff,30,Chennai,AI Engineer,0,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in NLP and Python.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Gaming, and mentoring others.",INTP,"Machine Learning,Gaming,AI,Startups"
+U002,Chandani Bhandari,34,Ahmedabad,Marketing Specialist,9,Product Management,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Cybersecurity and Data Analysis.
+Interested in building impactful products.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Public Speaking, and mentoring others.",ESFP,"Reading,Public Speaking,Gaming,Mentoring"
+U003,Ekaja Vasa,23,Pune,ML Engineer,1,Cloud Computing,"ML Engineer with 1 years of experience in the industry.
+Skilled in TensorFlow, Deep Learning, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and AI.",INTP,"Data Science,AI,Startups"
+U004,Anay Chada,42,Ahmedabad,Data Scientist,20,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Statistics and Python.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Teaching.",INTP,"AI,Teaching,Data Science,Machine Learning"
+U005,Kala Keer,40,Ahmedabad,Doctor,11,Healthcare Innovation,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Diagnosis and Healthcare Management.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Healthcare, and mentoring others.",ISFP,"Fitness,Healthcare,Teaching,Reading"
+U006,Xalak Purohit,45,Ahmedabad,Accountant,17,Leadership,"Accountant with 17 years of experience in the industry.
+Skilled in Deep Learning, Python, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Writing.",ESTJ,"Reading,Writing,Music"
+U007,Madhavi Dalal,45,Pune,Cybersecurity Analyst,20,Cybersecurity,"Cybersecurity Analyst with 20 years of experience in the industry.
+Skilled in SIEM, Cybersecurity, and Network Security.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Data Science, and mentoring others.",ISFP,"Healthcare,Data Science,Machine Learning"
+U008,Thomas Suri,27,Hyderabad,Frontend Developer,3,Financial Growth,"Frontend Developer with 3 years of experience in the industry.
+Skilled in HTML, CSS, and JavaScript.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Data Science.",INTP,"Gaming,Data Science,Startups,Music"
+U009,Jeet Lanka,45,Chennai,Consultant,17,Cloud Computing,"Consultant with 17 years of experience in the industry.
+Skilled in Docker, Power BI, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Data Science, and mentoring others.",ESFP,"Finance,Data Science,Public Speaking,Gaming,Reading"
+U010,Girish Dara,30,Chennai,ML Engineer,7,Cloud Computing,"ML Engineer with 7 years of experience in the industry.
+Skilled in Python, AWS, and PyTorch.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Startups, AI, and mentoring others.",INTP,"Startups,AI,Data Science,Machine Learning"
+U011,Hemani Prashad,36,Mumbai,Nurse,8,Cloud Computing,"Nurse with 8 years of experience in the industry.
+Skilled in Machine Learning, Deep Learning, and Power BI.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Public Speaking, and mentoring others.",ESFP,"AI,Public Speaking,Photography,Startups,Mentoring"
+U012,Amaira Dasgupta,27,Kolkata,Nurse,2,Startup Founder,"Nurse with 2 years of experience in the industry.
+Skilled in Data Analysis, Docker, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Finance, and mentoring others.",INTP,"Healthcare,Finance,Public Speaking"
+U013,Timothy Suri,41,Mumbai,Product Manager,12,Data Analytics,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Communication and SQL.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Reading.",ESTJ,"Public Speaking,Reading,Writing,Music"
+U014,Saksham Sura,34,Bangalore,Frontend Developer,11,Healthcare Innovation,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in JavaScript and React.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Music, and mentoring others.",ISTP,"Finance,Music,Data Science,Mentoring,AI"
+U015,Ekbal Mani,27,Mumbai,Product Manager,5,Startup Founder,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Power BI and Deep Learning.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Travel.",ESTJ,"Finance,Travel,AI,Teaching,Public Speaking"
+U016,Pratyush Shere,26,Bangalore,Backend Developer,4,Cloud Computing,"Backend Developer with 4 years of experience in the industry.
+Skilled in API Development, System Design, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Machine Learning.",ESFP,"Teaching,Machine Learning,Public Speaking,Writing"
+U017,Zarna Singhal,45,Ahmedabad,Project Manager,20,AI Research,"Project Manager with 20 years of experience in the industry.
+Skilled in AWS, SQL, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Public Speaking.",ESTJ,"Mentoring,Public Speaking,Teaching,Fitness,Startups"
+U018,Sanya Tella,42,Ahmedabad,Full Stack Developer,17,Product Management,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Docker and Leadership.
+Interested in building impactful products.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, AI, and mentoring others.",ESTJ,"Teaching,AI,Finance,Healthcare"
+U019,Rushil Pradhan,30,Mumbai,DevOps Engineer,4,AI Research,"DevOps Engineer with 4 years of experience in the industry.
+Skilled in Communication, Power BI, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Photography.",INFP,"Machine Learning,Photography,Fitness"
+U020,Vedhika Chowdhury,27,Kolkata,Doctor,1,Healthcare Innovation,"Doctor with 1 years of experience in the industry.
+Skilled in Patient Care, Diagnosis, and Medical Documentation.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Fitness.",INTP,"Teaching,Fitness,Reading"
+U021,Nihal Doctor,39,Kolkata,Nurse,14,Healthcare Innovation,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Docker and Java.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Data Science, and mentoring others.",INFJ,"Photography,Data Science,AI,Reading,Music"
+U022,Omkaar Shah,29,Delhi,Business Analyst,7,Cloud Computing,"Experienced Business Analyst specializing in modern solutions.
+Strong expertise in Docker and Leadership.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Finance.",ESFJ,"Gaming,Finance,AI,Writing,Startups"
+U023,Dayita Naik,42,Delhi,Investment Advisor,13,Cloud Computing,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Java and Power BI.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Gaming.",ESTJ,"Mentoring,Gaming,Music,Public Speaking,Machine Learning"
+U024,Yashodhara Oak,45,Chennai,Data Scientist,20,Leadership,"Data Scientist with 20 years of experience in the industry.
+Skilled in Statistics, SQL, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Machine Learning.",INTP,"Teaching,Machine Learning,AI,Data Science"
+U025,Isaiah Badami,38,Kolkata,AI Engineer,8,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in Vector Databases and LLMs.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Machine Learning.",INTJ,"AI,Machine Learning,Gaming,Startups"
+U026,Ranveer Pingle,32,Kolkata,ML Engineer,7,Leadership,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in AWS and Deep Learning.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Data Science.",INTP,"Startups,Data Science,AI,Machine Learning"
+U027,Utkarsh Bhandari,27,Chennai,Financial Analyst,3,Financial Growth,"Financial Analyst with 3 years of experience in the industry.
+Skilled in Risk Analysis, Excel, and Finance.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Finance.",INTP,"Public Speaking,Finance,Writing"
+U028,Ishani Vasa,37,Delhi,Frontend Developer,7,Cloud Computing,"Frontend Developer with 7 years of experience in the industry.
+Skilled in UI Design, HTML, and React.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Writing.",ESFJ,"Public Speaking,Writing,Gaming,Teaching,Reading"
+U029,Nimrat Sarraf,41,Ahmedabad,DevOps Engineer,19,Healthcare Innovation,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in Data Analysis and Leadership.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, Healthcare, and mentoring others.",INTP,"Mentoring,Healthcare,Startups,Fitness"
+U030,Mekhala Dave,44,Kolkata,Data Scientist,14,AI Research,"Data Scientist with 14 years of experience in the industry.
+Skilled in SQL, Data Analysis, and Statistics.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Reading.",INTP,"Data Science,Reading,Machine Learning,AI"
+U031,Bakhshi Sarin,32,Mumbai,Product Manager,6,Startup Founder,"Product Manager with 6 years of experience in the industry.
+Skilled in Java, Python, and Power BI.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Photography, and mentoring others.",ENTJ,"Gaming,Photography,Music"
+U032,Upasna Natarajan,39,Mumbai,Marketing Specialist,14,Leadership,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Deep Learning and Python.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Teaching.",ENTP,"Startups,Teaching,Photography,Music,Writing"
+U033,Jasmit Parsa,44,Kolkata,DevOps Engineer,17,Product Management,"DevOps Engineer with 17 years of experience in the industry.
+Skilled in Machine Learning, Leadership, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Fitness.",ENFP,"Photography,Fitness,AI"
+U034,Tristan Mander,27,Ahmedabad,Consultant,5,Product Management,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Machine Learning and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Mentoring.",ISTP,"Writing,Mentoring,Finance"
+U035,Avi Padmanabhan,45,Delhi,ML Engineer,17,AI Research,"ML Engineer with 17 years of experience in the industry.
+Skilled in TensorFlow, PyTorch, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Data Science.",INTP,"AI,Data Science,Startups,Machine Learning"
+U036,Osha Acharya,29,Hyderabad,Marketing Specialist,7,Financial Growth,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Docker and Deep Learning.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Music, and mentoring others.",INTP,"Writing,Music,Startups,Mentoring,Gaming"
+U037,Raagini Dube,41,Bangalore,Cybersecurity Analyst,18,Leadership,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Network Security and SIEM.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Teaching, and mentoring others.",ESFJ,"Machine Learning,Teaching,Travel,Finance"
+U038,Jatin Nadkarni,41,Delhi,Financial Analyst,16,Leadership,"Experienced Financial Analyst specializing in modern solutions.
+Strong expertise in Excel and Business Intelligence.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Finance.",ENFJ,"Public Speaking,Finance,Writing,Reading"
+U039,Azad Grewal,45,Chennai,Frontend Developer,18,Cybersecurity,"Frontend Developer with 18 years of experience in the industry.
+Skilled in CSS, HTML, and React.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Writing, and mentoring others.",ENFJ,"AI,Writing,Reading,Machine Learning"
+U040,Quincy Misra,41,Mumbai,Marketing Specialist,14,Product Management,"Marketing Specialist with 14 years of experience in the industry.
+Skilled in Deep Learning, Java, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Writing, and mentoring others.",INFJ,"Fitness,Writing,Gaming,Mentoring,Photography"
+U041,Yashica Agrawal,36,Mumbai,Frontend Developer,10,Financial Growth,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in HTML and CSS.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Teaching, and mentoring others.",ENTP,"Finance,Teaching,Healthcare"
+U042,Parth Bora,35,Hyderabad,Graphic Designer,10,Healthcare Innovation,"Graphic Designer with 10 years of experience in the industry.
+Skilled in Java, Deep Learning, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Writing.",ISFP,"Photography,Writing,Travel,Music"
+U043,Reyansh Walla,42,Ahmedabad,Frontend Developer,12,Cloud Computing,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in HTML and CSS.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Photography, and mentoring others.",INFJ,"Travel,Photography,Healthcare"
+U044,Lekha Kale,39,Kolkata,Marketing Specialist,12,Startup Founder,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Cybersecurity and Python.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Data Science, and mentoring others.",INTP,"Machine Learning,Data Science,Healthcare"
+U045,Yatan Sangha,39,Ahmedabad,Healthcare Analyst,15,Healthcare Innovation,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in Communication and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Data Science.",INFJ,"Mentoring,Data Science,AI"
+U046,Anita Soman,34,Kolkata,Backend Developer,12,Cloud Computing,"Experienced Backend Developer specializing in modern solutions.
+Strong expertise in System Design and Docker.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Healthcare.",INFP,"Mentoring,Healthcare,Machine Learning,Music,Gaming"
+U047,Charvi Goyal,44,Kolkata,Data Scientist,18,AI Research,"Data Scientist with 18 years of experience in the industry.
+Skilled in Data Analysis, Statistics, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Reading, and mentoring others.",ISTJ,"AI,Reading,Data Science,Teaching"
+U048,Bachittar Rau,37,Mumbai,UI/UX Designer,14,Startup Founder,"Experienced UI/UX Designer specializing in modern solutions.
+Strong expertise in Power BI and Machine Learning.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Finance.",INFP,"Teaching,Finance,Mentoring,AI,Gaming"
+U049,Yahvi Minhas,35,Kolkata,Data Scientist,6,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Machine Learning and Python.
+Interested in building impactful products.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Teaching, and mentoring others.",ISTJ,"Machine Learning,Teaching,Reading,AI"
+U050,Nisha Savant,34,Ahmedabad,Full Stack Developer,12,Financial Growth,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in SQL and Leadership.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Healthcare, and mentoring others.",ENFP,"Finance,Healthcare,Reading,Travel"
+U051,Dipta Ramachandran,34,Ahmedabad,Data Scientist,5,AI Research,"Data Scientist with 5 years of experience in the industry.
+Skilled in Statistics, Python, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, AI, and mentoring others.",INTP,"Reading,AI,Teaching"
+U052,Sneha Batra,33,Chennai,Financial Analyst,10,Financial Growth,"Financial Analyst with 10 years of experience in the industry.
+Skilled in Excel, Finance, and Risk Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Public Speaking.",ISTJ,"Writing,Public Speaking,Reading"
+U053,Ikbal Behl,36,Delhi,Financial Analyst,7,Financial Growth,"Financial Analyst with 7 years of experience in the industry.
+Skilled in Finance, Excel, and Risk Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Writing, and mentoring others.",ISTP,"Public Speaking,Writing,Finance,Reading"
+U054,Vedika Lad,40,Ahmedabad,Doctor,15,Leadership,"Doctor with 15 years of experience in the industry.
+Skilled in Medical Documentation, Patient Care, and Healthcare Management.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Fitness, and mentoring others.",ESFJ,"Reading,Fitness,Teaching"
+U055,Anjali Pingle,33,Ahmedabad,AI Engineer,4,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in Deep Learning and Vector Databases.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, AI, and mentoring others.",INTP,"Machine Learning,AI,Startups"
+U056,David Sridhar,38,Bangalore,Consultant,8,Healthcare Innovation,"Consultant with 8 years of experience in the industry.
+Skilled in AWS, Docker, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Finance.",ESFJ,"Public Speaking,Finance,Photography,Healthcare"
+U057,Harsh Maharaj,28,Ahmedabad,AI Engineer,4,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in Python and Deep Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Startups.",ENTJ,"Gaming,Startups,Machine Learning"
+U058,Faris Dhingra,44,Kolkata,Backend Developer,19,Startup Founder,"Backend Developer with 19 years of experience in the industry.
+Skilled in System Design, Docker, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Finance, and mentoring others.",ENFJ,"Data Science,Finance,Fitness,Photography,Healthcare"
+U059,Rehaan Bhasin,43,Delhi,Project Manager,18,Product Management,"Project Manager with 18 years of experience in the industry.
+Skilled in Docker, Leadership, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, AI, and mentoring others.",ENTJ,"Mentoring,AI,Music"
+U060,Veda Seshadri,28,Bangalore,Full Stack Developer,3,Cloud Computing,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Deep Learning and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, Startups, and mentoring others.",ENTJ,"Mentoring,Startups,Photography,Machine Learning"
+U061,Upasna Sha,27,Kolkata,Data Scientist,5,Leadership,"Data Scientist with 5 years of experience in the industry.
+Skilled in Statistics, Python, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Data Science.",INTJ,"Teaching,Data Science,Reading,AI,Machine Learning"
+U062,Vasudha Chakraborty,45,Kolkata,Graphic Designer,20,Startup Founder,"Graphic Designer with 20 years of experience in the industry.
+Skilled in Java, Leadership, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Travel, and mentoring others.",ISFP,"Photography,Travel,Writing,Music"
+U063,Dakshesh Tata,33,Chennai,DevOps Engineer,8,Financial Growth,"DevOps Engineer with 8 years of experience in the industry.
+Skilled in AWS, Deep Learning, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Travel.",INFJ,"Machine Learning,Travel,Writing,Startups,Data Science"
+U064,Eesha Sabharwal,36,Mumbai,Content Writer,11,AI Research,"Content Writer with 11 years of experience in the industry.
+Skilled in Java, Docker, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Gaming.",INFP,"Machine Learning,Gaming,Public Speaking,Data Science"
+U065,Warhi Rao,41,Bangalore,DevOps Engineer,14,Financial Growth,"DevOps Engineer with 14 years of experience in the industry.
+Skilled in Machine Learning, SQL, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Photography.",INTJ,"Public Speaking,Photography,Music"
+U066,Yashasvi Vohra,31,Chennai,AI Engineer,4,AI Research,"AI Engineer with 4 years of experience in the industry.
+Skilled in LLMs, Vector Databases, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Startups, Gaming, and mentoring others.",ENTJ,"Startups,Gaming,Machine Learning,AI"
+U067,Zehaan Kohli,44,Delhi,Marketing Specialist,17,Healthcare Innovation,"Marketing Specialist with 17 years of experience in the industry.
+Skilled in Python, Communication, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Mentoring, and mentoring others.",ENTJ,"Photography,Mentoring,Healthcare,Reading"
+U068,Saanvi Saini,28,Chennai,Full Stack Developer,0,Cloud Computing,"Full Stack Developer with 0 years of experience in the industry.
+Skilled in Machine Learning, Communication, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Machine Learning.",ENFP,"Finance,Machine Learning,Startups"
+U069,Chakradev Trivedi,36,Chennai,Project Manager,7,Cloud Computing,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Machine Learning and Java.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Photography.",ESTJ,"Teaching,Photography,Travel,Writing"
+U070,Jairaj Handa,39,Chennai,Consultant,13,Healthcare Innovation,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Java and Machine Learning.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Travel, and mentoring others.",ESTJ,"Machine Learning,Travel,Fitness,Music,Healthcare"
+U071,Avi Prashad,45,Bangalore,Marketing Specialist,20,Cloud Computing,"Marketing Specialist with 20 years of experience in the industry.
+Skilled in Docker, Machine Learning, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Writing, and mentoring others.",ISTJ,"Machine Learning,Writing,Startups"
+U072,Urishilla Mukhopadhyay,40,Chennai,Cybersecurity Analyst,12,Leadership,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Network Security and SIEM.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Machine Learning.",INTJ,"Teaching,Machine Learning,Writing,AI,Gaming"
+U073,Nitara Apte,25,Mumbai,DevOps Engineer,2,AI Research,"DevOps Engineer with 2 years of experience in the industry.
+Skilled in Java, Python, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Teaching, and mentoring others.",ENFJ,"AI,Teaching,Data Science,Healthcare"
+U074,Janya Gandhi,45,Chennai,Consultant,17,Healthcare Innovation,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Python and AWS.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Mentoring.",ESTP,"Fitness,Mentoring,Data Science"
+U075,Amruta Swaminathan,36,Chennai,Consultant,10,Data Analytics,"Experienced Consultant specializing in modern solutions.
+Strong expertise in AWS and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Music.",ESFJ,"Photography,Music,Finance,Writing,AI"
+U076,Kavya Oommen,45,Pune,Full Stack Developer,19,Financial Growth,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Leadership and Python.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Photography.",INTP,"Music,Photography,Teaching,Gaming"
+U077,Anvi Dhillon,43,Delhi,Business Analyst,19,Leadership,"Experienced Business Analyst specializing in modern solutions.
+Strong expertise in Data Analysis and Machine Learning.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Startups, and mentoring others.",ISFP,"AI,Startups,Machine Learning"
+U078,Garima Ratta,27,Chennai,Full Stack Developer,2,Leadership,"Full Stack Developer with 2 years of experience in the industry.
+Skilled in Power BI, Java, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Travel.",ESTJ,"Teaching,Travel,Reading,Gaming,Writing"
+U079,Rushil Madan,45,Hyderabad,AI Engineer,20,AI Research,"AI Engineer with 20 years of experience in the industry.
+Skilled in NLP, Python, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Machine Learning.",INTJ,"Startups,Machine Learning,Gaming"
+U080,Vritti Raman,40,Kolkata,Project Manager,15,AI Research,"Project Manager with 15 years of experience in the industry.
+Skilled in SQL, Docker, and Communication.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Music, and mentoring others.",ESTJ,"Finance,Music,Mentoring,Teaching"
+U081,Ethan Gupta,25,Kolkata,Accountant,0,AI Research,"Accountant with 0 years of experience in the industry.
+Skilled in Data Analysis, Power BI, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Machine Learning, and mentoring others.",ISFJ,"Writing,Machine Learning,Gaming,Mentoring"
+U082,Yashasvi Krish,39,Mumbai,Consultant,14,Cloud Computing,"Consultant with 14 years of experience in the industry.
+Skilled in AWS, Leadership, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Fitness.",ENTJ,"Finance,Fitness,Music,Data Science,Writing"
+U083,Nathaniel Sarna,36,Kolkata,Data Scientist,7,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Statistics and SQL.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Machine Learning.",INTP,"Reading,Machine Learning,AI,Data Science"
+U084,Ansh Mody,29,Kolkata,Marketing Specialist,2,Cloud Computing,"Marketing Specialist with 2 years of experience in the industry.
+Skilled in Leadership, Deep Learning, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Finance, and mentoring others.",ISTP,"Travel,Finance,Mentoring,Gaming"
+U085,Yashica Arya,42,Hyderabad,Marketing Specialist,13,Leadership,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and AI.",ISTP,"Startups,AI,Machine Learning,Data Science,Reading"
+U086,Gabriel Dora,35,Mumbai,Business Analyst,13,Data Analytics,"Business Analyst with 13 years of experience in the industry.
+Skilled in Cybersecurity, Communication, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Music, and mentoring others.",ESTP,"Fitness,Music,Mentoring"
+U087,Ira Toor,30,Mumbai,Nurse,1,Cybersecurity,"Nurse with 1 years of experience in the industry.
+Skilled in Leadership, Deep Learning, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Teaching, and mentoring others.",INTP,"Music,Teaching,Startups,Gaming,Fitness"
+U088,Ronith Devi,27,Bangalore,Product Manager,5,Financial Growth,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, AI, and mentoring others.",ENFJ,"Public Speaking,AI,Music,Data Science,Photography"
+U089,Timothy Natt,33,Ahmedabad,Financial Analyst,10,Leadership,"Financial Analyst with 10 years of experience in the industry.
+Skilled in Risk Analysis, Finance, and Excel.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Public Speaking.",ISTP,"Finance,Public Speaking,Writing,Reading"
+U090,Warda Jani,31,Pune,UI/UX Designer,9,Data Analytics,"UI/UX Designer with 9 years of experience in the industry.
+Skilled in Python, Power BI, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Teaching.",ISFP,"Fitness,Teaching,Travel"
+U091,Aachal Gour,39,Hyderabad,Graphic Designer,14,Healthcare Innovation,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in Data Analysis and Leadership.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Travel.",ENFP,"Photography,Travel,Music,Writing"
+U092,Onkar Prakash,44,Delhi,Backend Developer,14,Cloud Computing,"Experienced Backend Developer specializing in modern solutions.
+Strong expertise in API Development and SQL.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Startups, and mentoring others.",ENTP,"Finance,Startups,Mentoring,Public Speaking"
+U093,Xiti Kadakia,30,Kolkata,Cloud Engineer,4,Cybersecurity,"Cloud Engineer with 4 years of experience in the industry.
+Skilled in AWS, Power BI, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Music.",ESFP,"AI,Music,Writing"
+U094,Chavvi Karan,44,Chennai,UI/UX Designer,14,Healthcare Innovation,"Experienced UI/UX Designer specializing in modern solutions.
+Strong expertise in Power BI and Docker.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Startups, and mentoring others.",INFP,"Reading,Startups,AI,Teaching,Gaming"
+U095,Samesh Sidhu,45,Ahmedabad,Consultant,20,Healthcare Innovation,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Communication and Machine Learning.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Machine Learning.",ENTP,"Gaming,Machine Learning,Music,AI,Reading"
+U096,Azad Deol,26,Ahmedabad,Doctor,0,Leadership,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Clinical Research and Medical Documentation.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Teaching, and mentoring others.",INFP,"Fitness,Teaching,Healthcare,Reading"
+U097,Ansh Pathak,43,Chennai,Financial Analyst,16,Financial Growth,"Financial Analyst with 16 years of experience in the industry.
+Skilled in Finance, Forecasting, and Excel.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Public Speaking, and mentoring others.",ESTJ,"Reading,Public Speaking,Writing,Finance"
+U098,Tejas Sule,42,Chennai,Project Manager,17,Cybersecurity,"Project Manager with 17 years of experience in the industry.
+Skilled in Docker, SQL, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Gaming, and mentoring others.",ESTJ,"AI,Gaming,Photography,Startups,Healthcare"
+U099,Ikbal Comar,31,Hyderabad,Cloud Engineer,4,AI Research,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in Communication and SQL.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Public Speaking.",ENTJ,"Startups,Public Speaking,Finance,Fitness,Photography"
+U100,Rohan Oak,42,Bangalore,ML Engineer,16,Leadership,"ML Engineer with 16 years of experience in the industry.
+Skilled in AWS, TensorFlow, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Machine Learning, and mentoring others.",INTJ,"Data Science,Machine Learning,AI,Startups"
+U101,Arya Virk,34,Ahmedabad,Marketing Specialist,4,AI Research,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Cybersecurity and Deep Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Healthcare and Fitness.",ISTJ,"Healthcare,Fitness,Teaching"
+U102,Ijaya Sunder,43,Chennai,Frontend Developer,13,Product Management,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in CSS and JavaScript.
+Interested in building impactful products.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Mentoring, and mentoring others.",ESFJ,"Healthcare,Mentoring,Public Speaking"
+U103,Yashoda Goda,35,Mumbai,UI/UX Designer,9,Data Analytics,"Experienced UI/UX Designer specializing in modern solutions.
+Strong expertise in Cybersecurity and Java.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Teaching.",INFP,"Writing,Teaching,Gaming,AI,Machine Learning"
+U104,Ishita Gulati,38,Mumbai,Doctor,12,Healthcare Innovation,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Medical Documentation and Healthcare Management.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Teaching, and mentoring others.",ISTJ,"Fitness,Teaching,Reading"
+U105,Devansh Vora,41,Pune,Consultant,12,AI Research,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Python and SQL.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Music, and mentoring others.",ISFJ,"Photography,Music,Teaching,Reading,Travel"
+U106,Mahika Sanghvi,45,Hyderabad,Backend Developer,20,Startup Founder,"Backend Developer with 20 years of experience in the industry.
+Skilled in SQL, Docker, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Reading, and mentoring others.",ISTP,"Writing,Reading,Travel,Gaming,Finance"
+U107,Shaurya Rana,43,Hyderabad,Data Scientist,18,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Statistics and Python.
+Interested in building impactful products.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Reading, and mentoring others.",INTJ,"Teaching,Reading,Data Science,AI,Machine Learning"
+U108,Tanmayi Vora,29,Mumbai,Cloud Engineer,7,AI Research,"Cloud Engineer with 7 years of experience in the industry.
+Skilled in Power BI, Leadership, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Teaching, and mentoring others.",ESFP,"Photography,Teaching,Fitness"
+U109,Naksh Dhawan,42,Ahmedabad,Healthcare Analyst,15,Cloud Computing,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in AWS and SQL.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Fitness.",ISTP,"Gaming,Fitness,Music,Startups"
+U110,Dominic Nadig,38,Chennai,Financial Analyst,13,Leadership,"Financial Analyst with 13 years of experience in the industry.
+Skilled in Risk Analysis, Forecasting, and Finance.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Public Speaking, and mentoring others.",ESFJ,"Finance,Public Speaking,Writing"
+U111,Yashoda Shetty,45,Hyderabad,Business Analyst,17,Product Management,"Experienced Business Analyst specializing in modern solutions.
+Strong expertise in Leadership and Communication.
+Interested in building impactful products.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Gaming.",ESFP,"Teaching,Gaming,Writing,Healthcare,Startups"
+U112,Ansh Raval,45,Mumbai,Cybersecurity Analyst,20,Cybersecurity,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Cybersecurity and SIEM.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Startups, Finance, and mentoring others.",ISFJ,"Startups,Finance,Reading,Public Speaking"
+U113,Zaid Zachariah,30,Delhi,Full Stack Developer,3,AI Research,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Python and SQL.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Mentoring.",INFJ,"Music,Mentoring,Gaming"
+U114,Thomas Sani,42,Ahmedabad,DevOps Engineer,12,Healthcare Innovation,"DevOps Engineer with 12 years of experience in the industry.
+Skilled in Deep Learning, Java, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Startups.",INTP,"Music,Startups,Reading,Healthcare"
+U115,Abhimanyu Nanda,41,Bangalore,Product Manager,19,Financial Growth,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Data Analysis and Java.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Travel, and mentoring others.",ENTJ,"Machine Learning,Travel,Gaming,Music"
+U116,Pavani Singh,45,Chennai,Investment Advisor,20,Startup Founder,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Python and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Reading, and mentoring others.",ISFP,"Photography,Reading,Teaching,Travel,Machine Learning"
+U117,Champak Rai,23,Chennai,DevOps Engineer,0,Cybersecurity,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in Machine Learning and Power BI.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Mentoring.",ESTJ,"Data Science,Mentoring,Startups,Photography,Teaching"
+U118,Jagrati Madan,43,Hyderabad,Data Scientist,20,AI Research,"Data Scientist with 20 years of experience in the industry.
+Skilled in Machine Learning, Data Analysis, and Statistics.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Reading, and mentoring others.",INTP,"Data Science,Reading,Machine Learning"
+U119,Damyanti Cherian,40,Hyderabad,AI Engineer,10,Startup Founder,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in NLP and Deep Learning.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Startups.",INTJ,"Gaming,Startups,AI,Machine Learning"
+U120,Pahal Bhalla,37,Pune,Doctor,12,Leadership,"Doctor with 12 years of experience in the industry.
+Skilled in Clinical Research, Diagnosis, and Healthcare Management.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Healthcare, and mentoring others.",ISTJ,"Teaching,Healthcare,Reading,Fitness"
+U121,Ekaraj Mani,32,Mumbai,Marketing Specialist,3,Financial Growth,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Docker and SQL.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Writing.",ENTJ,"Teaching,Writing,Gaming,Music"
+U122,Dhruv Prashad,39,Bangalore,Doctor,13,Healthcare Innovation,"Doctor with 13 years of experience in the industry.
+Skilled in Diagnosis, Clinical Research, and Healthcare Management.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Teaching.",ESTJ,"Reading,Teaching,Fitness"
+U123,Reyansh Prasad,45,Chennai,Graphic Designer,18,Product Management,"Graphic Designer with 18 years of experience in the industry.
+Skilled in Python, SQL, and Communication.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Photography, and mentoring others.",ENFP,"Music,Photography,Travel,Writing"
+U124,Charan Kapur,37,Chennai,ML Engineer,14,Cloud Computing,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in PyTorch and Deep Learning.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Startups.",ENTJ,"Data Science,Startups,Machine Learning,AI"
+U125,Jack Dyal,42,Pune,Marketing Specialist,13,Startup Founder,"Marketing Specialist with 13 years of experience in the industry.
+Skilled in Communication, Leadership, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Fitness.",ISTP,"Machine Learning,Fitness,Photography,Mentoring,Healthcare"
+U126,Jackson Borah,25,Hyderabad,Frontend Developer,0,Product Management,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in JavaScript and HTML.
+Interested in building impactful products.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Healthcare, and mentoring others.",ISTJ,"Data Science,Healthcare,Gaming,Startups"
+U127,Hamsini Mukhopadhyay,33,Delhi,Accountant,9,Financial Growth,"Accountant with 9 years of experience in the industry.
+Skilled in Communication, Leadership, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Healthcare and Data Science.",ESFP,"Healthcare,Data Science,Public Speaking,Teaching,Reading"
+U128,Hema Gera,43,Ahmedabad,Consultant,15,Healthcare Innovation,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Deep Learning and Docker.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Finance.",INTP,"Startups,Finance,Music,Healthcare,Travel"
+U129,Mekhala Cheema,40,Hyderabad,Business Analyst,17,Cybersecurity,"Business Analyst with 17 years of experience in the industry.
+Skilled in Java, Python, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Finance, and mentoring others.",INFJ,"Reading,Finance,Writing,Healthcare"
+U130,Bhavini Sen,40,Ahmedabad,DevOps Engineer,11,Cloud Computing,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in Power BI and Leadership.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Photography, and mentoring others.",INTP,"Gaming,Photography,Music"
+U131,Wakeeta Solanki,24,Chennai,Accountant,2,Data Analytics,"Accountant with 2 years of experience in the industry.
+Skilled in Java, Python, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Startups, Teaching, and mentoring others.",INFP,"Startups,Teaching,Fitness,Data Science"
+U132,Jagvi Sharma,31,Kolkata,Cybersecurity Analyst,6,Cybersecurity,"Cybersecurity Analyst with 6 years of experience in the industry.
+Skilled in Linux, Threat Analysis, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Startups, and mentoring others.",INFJ,"Machine Learning,Startups,Finance,Teaching,Mentoring"
+U133,Gayathri Kaul,27,Hyderabad,Financial Analyst,0,Leadership,"Experienced Financial Analyst specializing in modern solutions.
+Strong expertise in Business Intelligence and Finance.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Public Speaking.",ISTP,"Writing,Public Speaking,Finance,Reading"
+U134,Nicholas Shere,36,Bangalore,Frontend Developer,11,Financial Growth,"Experienced Frontend Developer specializing in modern solutions.
+Strong expertise in CSS and UI Design.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Data Science.",ESTP,"Public Speaking,Data Science,Travel,AI"
+U135,Champak Nadig,25,Ahmedabad,ML Engineer,1,AI Research,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in TensorFlow and Python.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Machine Learning, and mentoring others.",ENTJ,"Data Science,Machine Learning,AI"
+U136,Triya Gokhale,42,Pune,Backend Developer,12,Startup Founder,"Backend Developer with 12 years of experience in the industry.
+Skilled in Docker, SQL, and System Design.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Teaching, and mentoring others.",INFJ,"Fitness,Teaching,Gaming"
+U137,Wazir Sunder,43,Hyderabad,UI/UX Designer,19,Cloud Computing,"UI/UX Designer with 19 years of experience in the industry.
+Skilled in Communication, Cybersecurity, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Startups, and mentoring others.",ISFP,"Writing,Startups,Teaching,AI"
+U138,Harshil Andra,30,Kolkata,ML Engineer,5,Leadership,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in AWS and Deep Learning.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Startups, and mentoring others.",INTJ,"AI,Startups,Data Science,Machine Learning"
+U139,Advay Bir,39,Hyderabad,Content Writer,15,Startup Founder,"Content Writer with 15 years of experience in the industry.
+Skilled in Cybersecurity, Docker, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Machine Learning, and mentoring others.",ENFP,"Music,Machine Learning,Travel"
+U140,Vyanjana Agarwal,41,Pune,Content Writer,18,Financial Growth,"Experienced Content Writer specializing in modern solutions.
+Strong expertise in Power BI and Python.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Mentoring.",INFP,"Teaching,Mentoring,Startups,Travel,Public Speaking"
+U141,Janaki Sarna,45,Ahmedabad,UI/UX Designer,17,Cloud Computing,"Experienced UI/UX Designer specializing in modern solutions.
+Strong expertise in Power BI and Communication.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Public Speaking, and mentoring others.",ISFP,"Machine Learning,Public Speaking,Travel,Data Science,AI"
+U142,Urmi Randhawa,42,Mumbai,Data Scientist,19,Leadership,"Data Scientist with 19 years of experience in the industry.
+Skilled in Machine Learning, Data Analysis, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, AI, and mentoring others.",INTP,"Machine Learning,AI,Teaching,Reading,Data Science"
+U143,Chandani Oak,32,Ahmedabad,Graphic Designer,6,Product Management,"Graphic Designer with 6 years of experience in the industry.
+Skilled in Data Analysis, AWS, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Music, and mentoring others.",ENFP,"Travel,Music,Writing,Photography"
+U144,Rachit Sridhar,31,Bangalore,Business Analyst,4,Product Management,"Business Analyst with 4 years of experience in the industry.
+Skilled in AWS, Python, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Fitness, and mentoring others.",ESFP,"Data Science,Fitness,Gaming"
+U145,Arya Bhatti,32,Delhi,Nurse,7,Cybersecurity,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Communication and AWS.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Healthcare.",INTJ,"Startups,Healthcare,Teaching,Public Speaking"
+U146,Ojas Narasimhan,32,Hyderabad,UI/UX Designer,5,Financial Growth,"UI/UX Designer with 5 years of experience in the industry.
+Skilled in Java, AWS, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Teaching.",INFP,"Startups,Teaching,Healthcare,AI"
+U147,Fariq Varughese,45,Hyderabad,Project Manager,18,Startup Founder,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Cybersecurity and Python.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, AI, and mentoring others.",ENTJ,"Music,AI,Mentoring"
+U148,Janani Bala,27,Hyderabad,Marketing Specialist,2,Data Analytics,"Marketing Specialist with 2 years of experience in the industry.
+Skilled in Communication, Java, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Public Speaking.",ESTP,"Music,Public Speaking,Travel,AI,Reading"
+U149,Kavya Bajaj,34,Chennai,Healthcare Analyst,6,Cloud Computing,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in AWS and Machine Learning.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Fitness, and mentoring others.",ISTP,"Finance,Fitness,AI,Gaming"
+U150,Gagan Khurana,34,Mumbai,Doctor,8,Healthcare Innovation,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Healthcare Management and Clinical Research.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Healthcare and Reading.",ENTP,"Healthcare,Reading,Teaching,Fitness"
+U151,Unnati Ratti,26,Delhi,DevOps Engineer,1,Financial Growth,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in AWS and Communication.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Mentoring, and mentoring others.",INTJ,"Public Speaking,Mentoring,Healthcare,Reading"
+U152,Neelima Bhatti,31,Chennai,Doctor,7,Healthcare Innovation,"Doctor with 7 years of experience in the industry.
+Skilled in Patient Care, Clinical Research, and Healthcare Management.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Healthcare, and mentoring others.",ISTJ,"Reading,Healthcare,Teaching"
+U153,Yuvraj Seth,29,Hyderabad,Marketing Specialist,3,Financial Growth,"Marketing Specialist with 3 years of experience in the industry.
+Skilled in Docker, Communication, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Startups.",ISFJ,"Gaming,Startups,Travel"
+U154,Maya Munshi,38,Mumbai,Investment Advisor,8,Healthcare Innovation,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Python and Java.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Data Science, and mentoring others.",ESFP,"Photography,Data Science,Startups"
+U155,Urishilla Shah,43,Ahmedabad,DevOps Engineer,19,Cloud Computing,"DevOps Engineer with 19 years of experience in the industry.
+Skilled in AWS, Communication, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Machine Learning, and mentoring others.",ISTJ,"Data Science,Machine Learning,Startups,Mentoring"
+U156,Chaitaly Chandra,31,Chennai,Data Scientist,8,Leadership,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Machine Learning and SQL.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Data Science.",INTJ,"Teaching,Data Science,Machine Learning,Reading"
+U157,Theodore Ben,22,Delhi,Product Manager,0,Healthcare Innovation,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Machine Learning and Leadership.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Finance, and mentoring others.",ENFJ,"Photography,Finance,AI,Public Speaking"
+U158,Xalak Loyal,35,Hyderabad,Investment Advisor,7,Leadership,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Leadership and Docker.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Reading, and mentoring others.",ENFJ,"Fitness,Reading,Startups,Mentoring"
+U159,Aarnav Mishra,45,Delhi,Investment Advisor,20,Leadership,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Communication and SQL.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Mentoring.",ESFP,"Writing,Mentoring,AI"
+U160,Onkar Rana,43,Mumbai,Business Analyst,20,Financial Growth,"Experienced Business Analyst specializing in modern solutions.
+Strong expertise in Communication and Data Analysis.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Healthcare, and mentoring others.",ENTP,"Gaming,Healthcare,Reading,Teaching"
+U161,Xavier Sundaram,44,Ahmedabad,Accountant,14,Startup Founder,"Experienced Accountant specializing in modern solutions.
+Strong expertise in SQL and Leadership.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Startups.",ESFP,"Public Speaking,Startups,Healthcare"
+U162,Wridesh Barman,45,Ahmedabad,Full Stack Developer,18,Cloud Computing,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Travel.",ESFP,"Music,Travel,Mentoring,Machine Learning,Reading"
+U163,Parth Sinha,45,Hyderabad,Doctor,20,Leadership,"Doctor with 20 years of experience in the industry.
+Skilled in Diagnosis, Medical Documentation, and Clinical Research.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Healthcare and Teaching.",INFJ,"Healthcare,Teaching,Fitness,Reading"
+U164,Omya Manne,36,Chennai,Marketing Specialist,14,Startup Founder,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Power BI and AWS.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Healthcare, and mentoring others.",INFJ,"Writing,Healthcare,Startups"
+U165,Shivani Chaudhary,36,Delhi,Nurse,10,Financial Growth,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Machine Learning and Leadership.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Photography.",ISTJ,"Startups,Photography,Travel"
+U166,Jhalak Mammen,39,Delhi,DevOps Engineer,12,Startup Founder,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in SQL and Data Analysis.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Startups.",INTP,"Data Science,Startups,Photography"
+U167,Dalaja Boase,45,Chennai,Product Manager,20,Leadership,"Product Manager with 20 years of experience in the industry.
+Skilled in Python, Power BI, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Teaching, and mentoring others.",ENFJ,"Data Science,Teaching,Fitness,Public Speaking,AI"
+U168,Tarak Rajagopalan,35,Hyderabad,AI Engineer,11,Startup Founder,"AI Engineer with 11 years of experience in the industry.
+Skilled in LLMs, Python, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Machine Learning.",ENTJ,"Gaming,Machine Learning,Startups"
+U169,Yatan Tata,24,Mumbai,Data Scientist,0,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in SQL and Statistics.
+Interested in building impactful products.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Teaching, and mentoring others.",INTJ,"Data Science,Teaching,Machine Learning"
+U170,Girish Nori,29,Chennai,Financial Analyst,7,Financial Growth,"Experienced Financial Analyst specializing in modern solutions.
+Strong expertise in Business Intelligence and Excel.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Writing.",ENFP,"Reading,Writing,Finance"
+U171,Pavani Nanda,30,Hyderabad,Business Analyst,2,Cybersecurity,"Business Analyst with 2 years of experience in the industry.
+Skilled in Cybersecurity, Leadership, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Public Speaking.",ESFP,"Data Science,Public Speaking,Travel,Photography"
+U172,Indrajit Hayre,41,Bangalore,Cybersecurity Analyst,16,Cybersecurity,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Threat Analysis and SIEM.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Photography, and mentoring others.",INTJ,"Healthcare,Photography,AI"
+U173,Baghyawati Bora,41,Bangalore,Accountant,11,Startup Founder,"Experienced Accountant specializing in modern solutions.
+Strong expertise in SQL and Leadership.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Data Science.",ISFJ,"Fitness,Data Science,Finance,Healthcare,Machine Learning"
+U174,Darpan Bobal,30,Pune,Marketing Specialist,8,Product Management,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in Leadership and Python.
+Interested in building impactful products.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Machine Learning.",INTJ,"Finance,Machine Learning,Reading,Healthcare,Startups"
+U175,Garima Krishnan,45,Bangalore,Healthcare Analyst,18,Healthcare Innovation,"Healthcare Analyst with 18 years of experience in the industry.
+Skilled in Leadership, Data Analysis, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Fitness.",ESFP,"Reading,Fitness,Photography,Public Speaking"
+U176,Gayathri Sampath,32,Hyderabad,Cloud Engineer,4,Financial Growth,"Cloud Engineer with 4 years of experience in the industry.
+Skilled in Python, SQL, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Healthcare.",ENFJ,"Machine Learning,Healthcare,Photography"
+U177,Yagnesh Nanda,45,Pune,Product Manager,18,Startup Founder,"Product Manager with 18 years of experience in the industry.
+Skilled in Java, Docker, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Healthcare.",ENFJ,"Teaching,Healthcare,Photography"
+U178,Abeer Subramanian,30,Chennai,UI/UX Designer,7,Data Analytics,"UI/UX Designer with 7 years of experience in the industry.
+Skilled in Deep Learning, Java, and Communication.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Fitness, and mentoring others.",INFP,"Machine Learning,Fitness,Music,Mentoring,Gaming"
+U179,Chameli Rau,44,Delhi,Frontend Developer,19,AI Research,"Frontend Developer with 19 years of experience in the industry.
+Skilled in HTML, UI Design, and React.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Fitness.",ENFJ,"Gaming,Fitness,Mentoring,Writing,Data Science"
+U180,Saanvi Narayan,45,Pune,Graphic Designer,17,Cybersecurity,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in Data Analysis and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Music.",INFP,"Writing,Music,Travel"
+U181,Jagrati Karan,28,Chennai,Frontend Developer,5,Data Analytics,"Frontend Developer with 5 years of experience in the industry.
+Skilled in JavaScript, React, and UI Design.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Healthcare, and mentoring others.",ISFP,"Machine Learning,Healthcare,Teaching,Music"
+U182,Hredhaan Tank,39,Mumbai,Cloud Engineer,12,Startup Founder,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in Data Analysis and Java.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, Public Speaking, and mentoring others.",ESTP,"Mentoring,Public Speaking,Reading"
+U183,Naksh Hayer,27,Hyderabad,Financial Analyst,3,Financial Growth,"Financial Analyst with 3 years of experience in the industry.
+Skilled in Excel, Forecasting, and Business Intelligence.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Reading.",INTJ,"Writing,Reading,Public Speaking"
+U184,Advaith Naik,40,Hyderabad,Backend Developer,10,Cloud Computing,"Experienced Backend Developer specializing in modern solutions.
+Strong expertise in Java and SQL.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Music, and mentoring others.",INTP,"Writing,Music,Reading,Healthcare"
+U185,Karan Dey,30,Bangalore,Product Manager,7,Financial Growth,"Product Manager with 7 years of experience in the industry.
+Skilled in Machine Learning, Java, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Data Science, and mentoring others.",ESTJ,"Writing,Data Science,Gaming,Healthcare"
+U186,Jagat Natarajan,31,Hyderabad,Nurse,1,Leadership,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Python and Data Analysis.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Public Speaking.",INTJ,"Fitness,Public Speaking,Teaching,Healthcare"
+U187,Samuel Bahl,38,Mumbai,Investment Advisor,11,AI Research,"Investment Advisor with 11 years of experience in the industry.
+Skilled in Deep Learning, Cybersecurity, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Data Science, and mentoring others.",INFJ,"Photography,Data Science,Reading,Fitness"
+U188,Advik Chadha,45,Chennai,DevOps Engineer,18,Cybersecurity,"DevOps Engineer with 18 years of experience in the industry.
+Skilled in Communication, Leadership, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Fitness.",ESFP,"Finance,Fitness,Gaming"
+U189,Aarna Sridhar,41,Bangalore,Accountant,15,AI Research,"Accountant with 15 years of experience in the industry.
+Skilled in Leadership, Machine Learning, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Music, and mentoring others.",ENTP,"Machine Learning,Music,Startups"
+U190,Xalak Mitter,35,Mumbai,Frontend Developer,11,Financial Growth,"Frontend Developer with 11 years of experience in the industry.
+Skilled in CSS, UI Design, and React.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Public Speaking, and mentoring others.",ISTP,"AI,Public Speaking,Travel"
+U191,Oscar Acharya,45,Mumbai,Cloud Engineer,20,Cloud Computing,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in Communication and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Public Speaking, and mentoring others.",ENFP,"Data Science,Public Speaking,Photography,Startups"
+U192,Charles Nagi,32,Delhi,Cloud Engineer,9,AI Research,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in Communication and AWS.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, AI, and mentoring others.",INTJ,"Gaming,AI,Healthcare"
+U193,Isaiah Pau,41,Pune,Cybersecurity Analyst,18,Cybersecurity,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in SIEM and Linux.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Music.",ISTJ,"Photography,Music,Fitness,Healthcare,Gaming"
+U194,Maanav Pal,43,Mumbai,Business Analyst,17,Financial Growth,"Experienced Business Analyst specializing in modern solutions.
+Strong expertise in Java and AWS.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Gaming, and mentoring others.",INFP,"Music,Gaming,Travel"
+U195,Triya Iyengar,24,Chennai,Marketing Specialist,1,AI Research,"Experienced Marketing Specialist specializing in modern solutions.
+Strong expertise in AWS and Leadership.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Mentoring.",INFP,"AI,Mentoring,Data Science,Machine Learning"
+U196,Jatin Srivastava,38,Ahmedabad,Investment Advisor,13,Cybersecurity,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Data Analysis and Deep Learning.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Travel.",INTP,"Gaming,Travel,Public Speaking,Mentoring"
+U197,Elijah Kala,45,Delhi,Cloud Engineer,19,Leadership,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in SQL and Leadership.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Photography.",ESFP,"Writing,Photography,Gaming,Finance"
+U198,Kevin Raman,32,Kolkata,Product Manager,3,AI Research,"Product Manager with 3 years of experience in the industry.
+Skilled in Deep Learning, Power BI, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Teaching, and mentoring others.",ENFJ,"Reading,Teaching,Fitness"
+U199,Shaurya Murty,30,Delhi,UI/UX Designer,6,Cloud Computing,"Experienced UI/UX Designer specializing in modern solutions.
+Strong expertise in Java and AWS.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Healthcare.",INFP,"Startups,Healthcare,Finance"
+U200,Zayyan Thakkar,34,Chennai,Project Manager,9,Startup Founder,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Machine Learning and Java.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Mentoring, and mentoring others.",ENTJ,"Public Speaking,Mentoring,Data Science,Startups,Machine Learning"
+U201,Faris Saha,31,Pune,AI Engineer,6,AI Research,"AI Engineer with 6 years of experience in the industry.
+Skilled in Deep Learning, LLMs, and Vector Databases.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Startups.",INTP,"Gaming,Startups,Machine Learning"
+U202,Lekha Dhingra,45,Bangalore,Cybersecurity Analyst,15,Leadership,"Cybersecurity Analyst with 15 years of experience in the industry.
+Skilled in SIEM, Threat Analysis, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Reading.",ESFP,"AI,Reading,Healthcare,Music"
+U203,Vedant Barman,33,Pune,DevOps Engineer,7,AI Research,"DevOps Engineer with 7 years of experience in the industry.
+Skilled in Leadership, Deep Learning, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Fitness, and mentoring others.",ISTP,"Teaching,Fitness,Data Science"
+U204,Ridhi Kumar,29,Bangalore,Frontend Developer,6,Data Analytics,"Frontend Developer with 6 years of experience in the industry.
+Skilled in HTML, React, and CSS.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Public Speaking, and mentoring others.",ISTJ,"Finance,Public Speaking,Startups"
+U205,Girik Kothari,26,Hyderabad,ML Engineer,3,AI Research,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in TensorFlow and AWS.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Data Science, and mentoring others.",ENTJ,"Machine Learning,Data Science,Startups,AI"
+U206,Warjas Tank,31,Pune,Graphic Designer,1,AI Research,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in Data Analysis and Machine Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Travel and Writing.",INFP,"Travel,Writing,Photography,Music"
+U207,Lakshit Padmanabhan,45,Ahmedabad,Financial Analyst,20,Financial Growth,"Experienced Financial Analyst specializing in modern solutions.
+Strong expertise in Excel and Forecasting.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Public Speaking, and mentoring others.",INFP,"Finance,Public Speaking,Reading,Writing"
+U208,Faqid Swamy,42,Pune,Cybersecurity Analyst,12,Cybersecurity,"Cybersecurity Analyst with 12 years of experience in the industry.
+Skilled in Threat Analysis, Cybersecurity, and Linux.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and Machine Learning.",ISFJ,"Music,Machine Learning,Photography,Gaming"
+U209,Nisha Narasimhan,42,Hyderabad,Backend Developer,12,Startup Founder,"Backend Developer with 12 years of experience in the industry.
+Skilled in Docker, Java, and System Design.
+Passionate about innovation and continuous learning.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Startups.",ISFJ,"Finance,Startups,Teaching"
+U210,Yatan Zachariah,37,Delhi,AI Engineer,10,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in Vector Databases and NLP.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Startups.",INTJ,"Machine Learning,Startups,AI,Gaming"
+U211,Ladli Kale,36,Pune,Consultant,12,Healthcare Innovation,"Consultant with 12 years of experience in the industry.
+Skilled in AWS, Machine Learning, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Fitness.",ESTP,"Writing,Fitness,Photography,Music"
+U212,Panini Nagarajan,41,Delhi,ML Engineer,12,Cloud Computing,"ML Engineer with 12 years of experience in the industry.
+Skilled in Python, PyTorch, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Machine Learning.",INTJ,"AI,Machine Learning,Data Science,Startups"
+U213,Nakul Wagle,40,Ahmedabad,Consultant,18,Healthcare Innovation,"Experienced Consultant specializing in modern solutions.
+Strong expertise in Java and Data Analysis.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Finance, and mentoring others.",ESFP,"Machine Learning,Finance,Public Speaking,Startups"
+U214,Mohammed Rege,35,Kolkata,Project Manager,9,Product Management,"Project Manager with 9 years of experience in the industry.
+Skilled in Leadership, Java, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Reading, and mentoring others.",ENTJ,"Teaching,Reading,AI,Mentoring,Travel"
+U215,Aryan Sethi,40,Pune,Content Writer,12,Cloud Computing,"Content Writer with 12 years of experience in the industry.
+Skilled in Machine Learning, Java, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Data Science.",ENFP,"Public Speaking,Data Science,Mentoring,Music,Writing"
+U216,Harini Pathak,43,Chennai,Cybersecurity Analyst,13,Cybersecurity,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Network Security and SIEM.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Startups.",ENTJ,"Fitness,Startups,Music"
+U217,Ati Kunda,35,Mumbai,DevOps Engineer,5,Cybersecurity,"DevOps Engineer with 5 years of experience in the industry.
+Skilled in Deep Learning, Machine Learning, and Power BI.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Healthcare, and mentoring others.",ESTP,"Music,Healthcare,Public Speaking,Gaming,Data Science"
+U218,Eesha Guha,32,Chennai,Product Manager,5,Product Management,"Product Manager with 5 years of experience in the industry.
+Skilled in Docker, Java, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Fitness, Travel, and mentoring others.",ESTJ,"Fitness,Travel,Mentoring"
+U219,Maanav Pingle,34,Chennai,Consultant,12,Healthcare Innovation,"Consultant with 12 years of experience in the industry.
+Skilled in Power BI, SQL, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Photography, and mentoring others.",INTJ,"Travel,Photography,Gaming,Startups,Data Science"
+U220,Daksh Hayer,37,Hyderabad,UI/UX Designer,9,Cybersecurity,"UI/UX Designer with 9 years of experience in the industry.
+Skilled in Cybersecurity, SQL, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Photography.",ISFP,"Fitness,Photography,Reading,Gaming,Travel"
+U221,Matthew Lalla,40,Delhi,Frontend Developer,11,AI Research,"Frontend Developer with 11 years of experience in the industry.
+Skilled in CSS, HTML, and JavaScript.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Machine Learning, and mentoring others.",ESTP,"Finance,Machine Learning,Photography"
+U222,Kashvi Seth,30,Delhi,Full Stack Developer,2,Leadership,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in SQL and Python.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Music.",INTJ,"Teaching,Music,Machine Learning"
+U223,Aadi Sant,31,Pune,ML Engineer,1,Cloud Computing,"ML Engineer with 1 years of experience in the industry.
+Skilled in Python, Deep Learning, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Startups and Machine Learning.",INTJ,"Startups,Machine Learning,Data Science"
+U224,Ekapad Raval,38,Chennai,Investment Advisor,10,Healthcare Innovation,"Investment Advisor with 10 years of experience in the industry.
+Skilled in Java, AWS, and Power BI.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Music, and mentoring others.",ISTJ,"Travel,Music,Public Speaking,Finance,Healthcare"
+U225,Anay Bala,39,Ahmedabad,Investment Advisor,13,Financial Growth,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Docker and Data Analysis.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Fitness, and mentoring others.",ISTP,"Music,Fitness,Photography,Startups"
+U226,Pallavi Palan,30,Mumbai,DevOps Engineer,4,Healthcare Innovation,"DevOps Engineer with 4 years of experience in the industry.
+Skilled in Docker, Leadership, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Mentoring, and mentoring others.",ISFJ,"Healthcare,Mentoring,Machine Learning,Startups"
+U227,Varenya Subramaniam,36,Bangalore,Project Manager,10,Product Management,"Project Manager with 10 years of experience in the industry.
+Skilled in Cybersecurity, Python, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Reading.",ENTJ,"Finance,Reading,Healthcare,Mentoring"
+U228,Jack Banerjee,45,Kolkata,Graphic Designer,18,Cybersecurity,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in Power BI and Deep Learning.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Travel.",ENFP,"Writing,Travel,Photography,Music"
+U229,Zinal Sundaram,45,Bangalore,Healthcare Analyst,18,Financial Growth,"Healthcare Analyst with 18 years of experience in the industry.
+Skilled in Docker, Deep Learning, and Leadership.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, Finance, and mentoring others.",ESFJ,"Mentoring,Finance,Fitness"
+U230,Jagrati Toor,32,Pune,Project Manager,9,Startup Founder,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Python and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Reading, and mentoring others.",ESTJ,"Writing,Reading,Data Science"
+U231,Bhanumati Acharya,36,Delhi,Project Manager,7,Cloud Computing,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Data Analysis and Java.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and Music.",ENTJ,"Writing,Music,Machine Learning,Photography"
+U232,Ubika Dhingra,28,Ahmedabad,Project Manager,2,Cloud Computing,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Cybersecurity and Power BI.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Fitness.",ENTJ,"Photography,Fitness,Gaming,Writing,Healthcare"
+U233,Luke Kadakia,45,Mumbai,Doctor,18,Healthcare Innovation,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Healthcare Management and Medical Documentation.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Reading, and mentoring others.",INTJ,"Healthcare,Reading,Fitness,Teaching"
+U234,Daniel Rai,43,Pune,DevOps Engineer,19,AI Research,"DevOps Engineer with 19 years of experience in the industry.
+Skilled in SQL, Docker, and Machine Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Data Science.",ENFP,"Mentoring,Data Science,AI,Healthcare,Music"
+U235,Jagvi Chakrabarti,33,Delhi,Project Manager,6,Cybersecurity,"Project Manager with 6 years of experience in the industry.
+Skilled in SQL, Data Analysis, and AWS.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Gaming.",ENTJ,"Fitness,Gaming,Travel"
+U236,Qabil Dalal,43,Hyderabad,Doctor,14,Leadership,"Doctor with 14 years of experience in the industry.
+Skilled in Diagnosis, Clinical Research, and Medical Documentation.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Reading.",ENTJ,"Teaching,Reading,Fitness,Healthcare"
+U237,Girish Maharaj,31,Bangalore,Product Manager,2,Cloud Computing,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Docker and Data Analysis.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Travel, and mentoring others.",ENTJ,"Machine Learning,Travel,Reading"
+U238,Yatan Upadhyay,38,Delhi,Cloud Engineer,8,Cloud Computing,"Cloud Engineer with 8 years of experience in the industry.
+Skilled in Cybersecurity, Communication, and Docker.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Fitness, and mentoring others.",ENTP,"Finance,Fitness,Gaming,Mentoring"
+U239,Ekalinga Gola,45,Pune,Full Stack Developer,16,Data Analytics,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Data Analysis and AWS.
+Interested in building impactful products.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, AI, and mentoring others.",ESFP,"Writing,AI,Machine Learning"
+U240,Ayaan Bora,41,Kolkata,AI Engineer,16,AI Research,"AI Engineer with 16 years of experience in the industry.
+Skilled in Python, Vector Databases, and Deep Learning.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Machine Learning.",INTP,"Gaming,Machine Learning,AI,Startups"
+U241,Aryan Sood,41,Delhi,Cybersecurity Analyst,17,Cybersecurity,"Cybersecurity Analyst with 17 years of experience in the industry.
+Skilled in Network Security, Cybersecurity, and Linux.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Healthcare, and mentoring others.",ESTJ,"Gaming,Healthcare,Music"
+U242,Mohini Kale,40,Pune,Graphic Designer,18,Cybersecurity,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Photography and Travel.",INFP,"Photography,Travel,Writing,Music"
+U243,Janya Lal,44,Bangalore,Project Manager,14,Leadership,"Project Manager with 14 years of experience in the industry.
+Skilled in Python, Docker, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Music, and mentoring others.",ENTJ,"Healthcare,Music,Writing,Fitness"
+U244,Bhavani Natarajan,31,Mumbai,DevOps Engineer,4,Financial Growth,"DevOps Engineer with 4 years of experience in the industry.
+Skilled in Cybersecurity, Java, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Startups, and mentoring others.",INFJ,"Writing,Startups,Reading,Travel"
+U245,Yashica Pingle,36,Hyderabad,Frontend Developer,10,Product Management,"Frontend Developer with 10 years of experience in the industry.
+Skilled in JavaScript, HTML, and CSS.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Healthcare.",INFP,"Data Science,Healthcare,Mentoring,Finance,Machine Learning"
+U246,Nimrat Bansal,45,Pune,Content Writer,20,AI Research,"Experienced Content Writer specializing in modern solutions.
+Strong expertise in Java and Leadership.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Gaming, and mentoring others.",ENFP,"Reading,Gaming,Photography,Healthcare"
+U247,Hredhaan Buch,36,Mumbai,ML Engineer,14,Leadership,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in Deep Learning and PyTorch.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Data Science and Startups.",INTJ,"Data Science,Startups,Machine Learning"
+U248,Naveen Ramaswamy,41,Hyderabad,DevOps Engineer,17,Cloud Computing,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in Deep Learning and Docker.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Startups, Finance, and mentoring others.",INFP,"Startups,Finance,Public Speaking"
+U249,Turvi Barad,28,Kolkata,Nurse,5,Startup Founder,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Communication and Deep Learning.
+Interested in building impactful products.
+Career Goal: Startup Founder.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Mentoring and Reading.",ENTP,"Mentoring,Reading,Teaching,Startups"
+U250,Theodore Kunda,37,Chennai,Marketing Specialist,12,Cloud Computing,"Marketing Specialist with 12 years of experience in the industry.
+Skilled in Docker, Deep Learning, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Gaming, and mentoring others.",ESTP,"Public Speaking,Gaming,AI,Startups"
+U251,Guneet Doctor,27,Delhi,Cloud Engineer,0,Cloud Computing,"Cloud Engineer with 0 years of experience in the industry.
+Skilled in Machine Learning, AWS, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Music, and mentoring others.",INTJ,"Photography,Music,Data Science"
+U252,Azad Madan,34,Kolkata,Frontend Developer,10,Product Management,"Frontend Developer with 10 years of experience in the industry.
+Skilled in JavaScript, UI Design, and React.
+Passionate about innovation and continuous learning.
+Career Goal: Product Management.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Finance and Fitness.",ENFP,"Finance,Fitness,Data Science"
+U253,Gautami Guha,37,Ahmedabad,AI Engineer,9,AI Research,"AI Engineer with 9 years of experience in the industry.
+Skilled in Vector Databases, NLP, and LLMs.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy AI, Startups, and mentoring others.",ENTJ,"AI,Startups,Machine Learning"
+U254,Faris Pant,42,Pune,Marketing Specialist,20,Data Analytics,"Marketing Specialist with 20 years of experience in the industry.
+Skilled in Machine Learning, Cybersecurity, and Communication.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Healthcare and Fitness.",INTJ,"Healthcare,Fitness,Startups,Travel"
+U255,Ishwar Agarwal,45,Chennai,Nurse,17,AI Research,"Experienced Nurse specializing in modern solutions.
+Strong expertise in Cybersecurity and Java.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Finance, and mentoring others.",INFP,"Writing,Finance,Reading,Machine Learning"
+U256,Omkaar Reddy,26,Bangalore,Business Analyst,1,Cloud Computing,"Business Analyst with 1 years of experience in the industry.
+Skilled in Communication, SQL, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Writing and AI.",ENTJ,"Writing,AI,Reading,Fitness,Music"
+U257,Wishi Peri,45,Mumbai,AI Engineer,20,AI Research,"AI Engineer with 20 years of experience in the industry.
+Skilled in Vector Databases, Deep Learning, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Startups.",INTP,"AI,Startups,Machine Learning,Gaming"
+U258,Nathan Sani,33,Bangalore,Cybersecurity Analyst,3,Leadership,"Experienced Cybersecurity Analyst specializing in modern solutions.
+Strong expertise in Cybersecurity and Network Security.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Fitness.",ISFJ,"Machine Learning,Fitness,Startups,Writing,Public Speaking"
+U259,Vamakshi Sarkar,37,Ahmedabad,Cybersecurity Analyst,12,Cybersecurity,"Cybersecurity Analyst with 12 years of experience in the industry.
+Skilled in Network Security, Cybersecurity, and Threat Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Travel and AI.",ENFJ,"Travel,AI,Gaming,Fitness"
+U260,Zayyan Kunda,40,Kolkata,Investment Advisor,11,Leadership,"Experienced Investment Advisor specializing in modern solutions.
+Strong expertise in Docker and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Teaching, and mentoring others.",INFJ,"Healthcare,Teaching,Machine Learning"
+U261,Neha Sathe,44,Chennai,Healthcare Analyst,18,AI Research,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in Communication and SQL.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Fitness, and mentoring others.",ENFJ,"Writing,Fitness,Data Science,Mentoring"
+U262,Chatura Mistry,44,Bangalore,Cybersecurity Analyst,17,Cybersecurity,"Cybersecurity Analyst with 17 years of experience in the industry.
+Skilled in Threat Analysis, Network Security, and SIEM.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Mentoring, and mentoring others.",ENFP,"Public Speaking,Mentoring,Teaching,Music,Finance"
+U263,Pahal Mohanty,44,Chennai,Frontend Developer,18,Healthcare Innovation,"Frontend Developer with 18 years of experience in the industry.
+Skilled in JavaScript, CSS, and UI Design.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Writing, Photography, and mentoring others.",ESTJ,"Writing,Photography,AI,Data Science,Finance"
+U264,Viraj Babu,39,Kolkata,Financial Analyst,10,Financial Growth,"Experienced Financial Analyst specializing in modern solutions.
+Strong expertise in Finance and Risk Analysis.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Writing.",INTJ,"Public Speaking,Writing,Finance,Reading"
+U265,Zilmil Swaminathan,39,Ahmedabad,Accountant,10,Leadership,"Accountant with 10 years of experience in the industry.
+Skilled in Machine Learning, Deep Learning, and Java.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Mentoring, Machine Learning, and mentoring others.",ENTP,"Mentoring,Machine Learning,Travel,Music,Data Science"
+U266,Advay Bajaj,43,Ahmedabad,Doctor,13,Healthcare Innovation,"Doctor with 13 years of experience in the industry.
+Skilled in Medical Documentation, Healthcare Management, and Patient Care.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Fitness.",ENFJ,"Reading,Fitness,Teaching,Healthcare"
+U267,Mekhala Aurora,38,Chennai,Data Scientist,16,Leadership,"Data Scientist with 16 years of experience in the industry.
+Skilled in Statistics, Python, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Teaching, and mentoring others.",INTP,"Data Science,Teaching,AI,Reading,Machine Learning"
+U268,Ansh Suri,45,Kolkata,Backend Developer,20,Cloud Computing,"Experienced Backend Developer specializing in modern solutions.
+Strong expertise in SQL and API Development.
+Interested in building impactful products.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Data Science, Gaming, and mentoring others.",INTJ,"Data Science,Gaming,Teaching,AI,Mentoring"
+U269,Yashasvi Ratti,26,Delhi,Accountant,0,Financial Growth,"Experienced Accountant specializing in modern solutions.
+Strong expertise in Power BI and Docker.
+Interested in building impactful products.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Public Speaking.",INFJ,"Machine Learning,Public Speaking,Teaching,Gaming"
+U270,Isaac Ratti,34,Bangalore,Accountant,6,Cybersecurity,"Experienced Accountant specializing in modern solutions.
+Strong expertise in Deep Learning and Leadership.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Startups, and mentoring others.",INTJ,"Teaching,Startups,Writing,Finance"
+U271,Bhavna Kuruvilla,45,Hyderabad,Accountant,20,Leadership,"Experienced Accountant specializing in modern solutions.
+Strong expertise in SQL and AWS.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Healthcare.",INTJ,"Teaching,Healthcare,Finance"
+U272,Netra Dara,38,Ahmedabad,Financial Analyst,11,Leadership,"Financial Analyst with 11 years of experience in the industry.
+Skilled in Business Intelligence, Forecasting, and Risk Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Writing, and mentoring others.",INTJ,"Reading,Writing,Public Speaking,Finance"
+U273,Zayan Oza,28,Ahmedabad,Full Stack Developer,5,Leadership,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Docker and Communication.
+Interested in building impactful products.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Startups, and mentoring others.",ENFP,"Travel,Startups,Music"
+U274,Amol Hora,45,Hyderabad,Project Manager,20,AI Research,"Experienced Project Manager specializing in modern solutions.
+Strong expertise in Data Analysis and Machine Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Photography, Writing, and mentoring others.",ENTJ,"Photography,Writing,Reading,Startups"
+U275,Kamya Singhal,40,Hyderabad,Healthcare Analyst,16,AI Research,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Music, and mentoring others.",ISFP,"Teaching,Music,Public Speaking"
+U276,Watika More,45,Kolkata,Investment Advisor,17,Healthcare Innovation,"Investment Advisor with 17 years of experience in the industry.
+Skilled in Python, Java, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Data Science.",INFP,"Public Speaking,Data Science,AI"
+U277,Pratyush Kurian,42,Ahmedabad,Data Scientist,17,Data Analytics,"Data Scientist with 17 years of experience in the industry.
+Skilled in Data Analysis, SQL, and Statistics.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Data Science.",ISTJ,"Machine Learning,Data Science,AI,Teaching,Reading"
+U278,Shaurya Viswanathan,29,Kolkata,Full Stack Developer,7,Startup Founder,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Docker and Data Analysis.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Reading, and mentoring others.",INFP,"Gaming,Reading,Travel,Fitness,Machine Learning"
+U279,Aayush Lall,31,Ahmedabad,Full Stack Developer,3,Leadership,"Full Stack Developer with 3 years of experience in the industry.
+Skilled in Deep Learning, AWS, and SQL.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Finance, Startups, and mentoring others.",ESTJ,"Finance,Startups,Public Speaking"
+U280,Tanvi Zacharia,29,Bangalore,Product Manager,4,Product Management,"Experienced Product Manager specializing in modern solutions.
+Strong expertise in Cybersecurity and Machine Learning.
+Interested in building impactful products.
+Career Goal: Product Management.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Gaming, and mentoring others.",ENFJ,"Travel,Gaming,AI"
+U281,Tanmayi Mukhopadhyay,44,Hyderabad,Backend Developer,15,Cloud Computing,"Backend Developer with 15 years of experience in the industry.
+Skilled in API Development, SQL, and System Design.
+Passionate about innovation and continuous learning.
+Career Goal: Cloud Computing.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Startups, and mentoring others.",ESFJ,"Machine Learning,Startups,Travel"
+U282,Ranveer Dhingra,33,Hyderabad,Frontend Developer,9,Financial Growth,"Frontend Developer with 9 years of experience in the industry.
+Skilled in CSS, JavaScript, and HTML.
+Passionate about innovation and continuous learning.
+Career Goal: Financial Growth.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Music and AI.",ENTJ,"Music,AI,Teaching,Public Speaking"
+U283,Fiyaz Goda,45,Delhi,Graphic Designer,18,Cybersecurity,"Experienced Graphic Designer specializing in modern solutions.
+Strong expertise in Docker and Power BI.
+Interested in building impactful products.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Music, Writing, and mentoring others.",ISFP,"Music,Writing,Photography"
+U284,Siddharth Kala,34,Hyderabad,DevOps Engineer,4,Healthcare Innovation,"Experienced DevOps Engineer specializing in modern solutions.
+Strong expertise in Communication and SQL.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Teaching and Machine Learning.",ISFP,"Teaching,Machine Learning,Gaming,Music"
+U285,Aadhya Mitra,36,Bangalore,Accountant,8,Leadership,"Accountant with 8 years of experience in the industry.
+Skilled in Java, Data Analysis, and Cybersecurity.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","Curious and creative thinker who values lifelong learning.
+I enjoy Machine Learning, Mentoring, and mentoring others.",ISFJ,"Machine Learning,Mentoring,Writing,Music"
+U286,Madhav Borde,41,Ahmedabad,Doctor,16,Leadership,"Experienced Doctor specializing in modern solutions.
+Strong expertise in Clinical Research and Healthcare Management.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Reading and Healthcare.",ENTJ,"Reading,Healthcare,Teaching,Fitness"
+U287,Jatin Sidhu,28,Kolkata,Cloud Engineer,1,Startup Founder,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in SQL and Deep Learning.
+Interested in building impactful products.
+Career Goal: Startup Founder.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Gaming, and mentoring others.",ISFP,"Healthcare,Gaming,Photography,AI,Mentoring"
+U288,Siddharth Gera,35,Mumbai,AI Engineer,6,AI Research,"Experienced AI Engineer specializing in modern solutions.
+Strong expertise in NLP and Vector Databases.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Machine Learning.",ENTJ,"Gaming,Machine Learning,AI,Startups"
+U289,Tanmayi Lad,38,Mumbai,Healthcare Analyst,8,Financial Growth,"Experienced Healthcare Analyst specializing in modern solutions.
+Strong expertise in Communication and Deep Learning.
+Interested in building impactful products.
+Career Goal: Financial Growth.","Curious and creative thinker who values lifelong learning.
+I enjoy Gaming, Reading, and mentoring others.",ENTP,"Gaming,Reading,Teaching,Public Speaking,Writing"
+U290,Vedhika Kar,45,Pune,Project Manager,20,Data Analytics,"Project Manager with 20 years of experience in the industry.
+Skilled in Machine Learning, Leadership, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Data Analytics.","Curious and creative thinker who values lifelong learning.
+I enjoy Healthcare, Writing, and mentoring others.",ENTJ,"Healthcare,Writing,Fitness,Public Speaking"
+U291,Isaiah Nagarajan,36,Hyderabad,Accountant,13,Healthcare Innovation,"Experienced Accountant specializing in modern solutions.
+Strong expertise in Python and Leadership.
+Interested in building impactful products.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Gaming and Healthcare.",ISTP,"Gaming,Healthcare,Mentoring,Machine Learning,Finance"
+U292,Harini Borra,39,Ahmedabad,Doctor,13,Healthcare Innovation,"Doctor with 13 years of experience in the industry.
+Skilled in Healthcare Management, Medical Documentation, and Clinical Research.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","Curious and creative thinker who values lifelong learning.
+I enjoy Teaching, Reading, and mentoring others.",INTP,"Teaching,Reading,Fitness,Healthcare"
+U293,Raagini Halder,34,Delhi,Full Stack Developer,8,Leadership,"Full Stack Developer with 8 years of experience in the industry.
+Skilled in Docker, Machine Learning, and Python.
+Passionate about innovation and continuous learning.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Fitness and Teaching.",INTJ,"Fitness,Teaching,Healthcare,Travel,Photography"
+U294,Radha Mane,45,Hyderabad,Cloud Engineer,18,AI Research,"Experienced Cloud Engineer specializing in modern solutions.
+Strong expertise in Cybersecurity and SQL.
+Interested in building impactful products.
+Career Goal: AI Research.","Curious and creative thinker who values lifelong learning.
+I enjoy Reading, Finance, and mentoring others.",ENFP,"Reading,Finance,Public Speaking,Startups,Data Science"
+U295,Ekavir Bala,28,Pune,ML Engineer,5,AI Research,"Experienced ML Engineer specializing in modern solutions.
+Strong expertise in PyTorch and Deep Learning.
+Interested in building impactful products.
+Career Goal: AI Research.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Machine Learning and Data Science.",ENTJ,"Machine Learning,Data Science,Startups"
+U296,Rajata Dhingra,40,Chennai,Product Manager,17,Healthcare Innovation,"Product Manager with 17 years of experience in the industry.
+Skilled in Communication, Deep Learning, and Data Analysis.
+Passionate about innovation and continuous learning.
+Career Goal: Healthcare Innovation.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Reading.",ENTJ,"AI,Reading,Startups,Healthcare,Writing"
+U297,Azad Kunda,33,Mumbai,Data Scientist,7,Data Analytics,"Experienced Data Scientist specializing in modern solutions.
+Strong expertise in Machine Learning and Data Analysis.
+Interested in building impactful products.
+Career Goal: Data Analytics.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy AI and Teaching.",ISTJ,"AI,Teaching,Data Science,Reading"
+U298,Upkaar Gade,34,Hyderabad,Cybersecurity Analyst,5,Cybersecurity,"Cybersecurity Analyst with 5 years of experience in the industry.
+Skilled in Network Security, Linux, and SIEM.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Travel, Machine Learning, and mentoring others.",ESFP,"Travel,Machine Learning,Reading"
+U299,Bina Mohan,40,Delhi,Full Stack Developer,12,Leadership,"Experienced Full Stack Developer specializing in modern solutions.
+Strong expertise in Leadership and Cybersecurity.
+Interested in building impactful products.
+Career Goal: Leadership.","I enjoy solving real-world problems and collaborating with teams.
+Outside work I enjoy Public Speaking and Gaming.",ESTJ,"Public Speaking,Gaming,Finance,Writing,Healthcare"
+U300,Bakhshi Chaudhari,41,Bangalore,Frontend Developer,17,Cybersecurity,"Frontend Developer with 17 years of experience in the industry.
+Skilled in React, CSS, and JavaScript.
+Passionate about innovation and continuous learning.
+Career Goal: Cybersecurity.","Curious and creative thinker who values lifelong learning.
+I enjoy Public Speaking, Healthcare, and mentoring others.",ESTP,"Public Speaking,Healthcare,Finance,Reading"
