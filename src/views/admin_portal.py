@@ -13,9 +13,22 @@ from sklearn.metrics import (
 import plotly.express as px
 from src.utils.loader import load_system, retrain_feedback_model, clear_system_caches
 from src.utils.model_manager import ModelManager
+from src.utils.audit_logger import log_event, load_audit_log, get_audit_event_types
+from src.utils.validators import calculate_profile_completeness
+from src.utils.data_manager import (
+    load_credentials_raw,
+    disable_account,
+    enable_account,
+    update_password_hash,
+    hash_password,
+    is_account_locked,
+)
+from src.utils.password_reset import generate_reset_token
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_DIR = PROJECT_ROOT / "models"
+DATA_DIR = PROJECT_ROOT / "data"
+
 
 
 def render_admin_dashboard(system):
@@ -177,7 +190,7 @@ def render_user_explorer(system):
     col1, col2 = st.columns([1, 2])
     with col1:
         skills_list = [s.strip() for s in str(user_row["skills"]).split(",") if s.strip()]
-        traits_list = [t.strip() for t in str(user_row.get("traits", "")).split(",") if s.strip()]
+        traits_list = [t.strip() for t in str(user_row.get("traits", "")).split(",") if t.strip()]
         skills_badges = "".join([f'<span class="badge badge-blue">{s}</span>' for s in skills_list])
         traits_badges = "".join([f'<span class="badge">{t}</span>' for t in traits_list])
         
@@ -297,7 +310,7 @@ def render_model_analytics(system):
             margin=dict(l=20, r=20, t=20, b=20),
             font=dict(family="Inter", size=11)
         )
-        st.plotly_chart(fig_coef, width="stretch")
+        st.plotly_chart(fig_coef, use_container_width=True)
 
     with col_vis_2:
         st.markdown("### 🔲 Confusion Matrix Heatmap")
@@ -317,7 +330,7 @@ def render_model_analytics(system):
             margin=dict(l=20, r=20, t=20, b=20),
             font=dict(family="Inter", size=11)
         )
-        st.plotly_chart(fig_cm, width="stretch")
+        st.plotly_chart(fig_cm, use_container_width=True)
 
 
 def render_dataset_insights(system):
@@ -367,7 +380,7 @@ def render_dataset_insights(system):
             margin=dict(l=10, r=10, t=10, b=10),
             font=dict(family="Inter", size=10)
         )
-        st.plotly_chart(fig_prof, width="stretch")
+        st.plotly_chart(fig_prof, use_container_width=True)
 
     with col_r1_2:
         st.markdown("### 🧬 User MBTI Distribution")
@@ -387,7 +400,7 @@ def render_dataset_insights(system):
             margin=dict(l=10, r=10, t=10, b=10),
             font=dict(family="Inter", size=10)
         )
-        st.plotly_chart(fig_mbti, width="stretch")
+        st.plotly_chart(fig_mbti, use_container_width=True)
 
     col_r2_1, col_r2_2 = st.columns(2)
     with col_r2_1:
@@ -411,7 +424,7 @@ def render_dataset_insights(system):
             margin=dict(l=10, r=10, t=10, b=10),
             font=dict(family="Inter", size=10)
         )
-        st.plotly_chart(fig_goal, width="stretch")
+        st.plotly_chart(fig_goal, use_container_width=True)
 
     with col_r2_2:
         st.markdown("### 🤝 Acceptance vs Rejection Distribution")
@@ -433,7 +446,7 @@ def render_dataset_insights(system):
             margin=dict(l=10, r=10, t=10, b=10),
             font=dict(family="Inter", size=10)
         )
-        st.plotly_chart(fig_action, width="stretch")
+        st.plotly_chart(fig_action, use_container_width=True)
 
 
 def render_explainability(system):
@@ -612,3 +625,545 @@ def render_system_status(system):
                 accuracy = retrain_feedback_model()
             st.success(f"Model retrained successfully! Latest model accuracy: {accuracy * 100:.2f}%")
             st.rerun()
+
+    # Section 3: Email & Security Status
+    st.markdown("---")
+    st.markdown("### 📧 Email & Security Status")
+    
+    from src.utils.config import Config
+    from src.utils.email_service import check_smtp_status
+    from src.utils.password_reset import get_pending_resets_count
+    from src.utils.notifications import get_pending_notifications_count
+    
+    sec_col1, sec_col2, sec_col3 = st.columns(3)
+    
+    with sec_col1:
+        smtp_ok, smtp_msg = check_smtp_status()
+        status_text = "🟢 Connected" if smtp_ok else f"🔴 Offline ({smtp_msg})"
+        if not Config.ENABLE_EMAILS:
+            status_text = "⚪ Disabled"
+        st.markdown(f"**Email Service (SMTP):** {status_text}")
+        st.write(f"Environment: `{Config.APP_ENV}`")
+        st.write(f"App Version: `{Config.APP_VERSION}`")
+        
+    with sec_col2:
+        pending_resets = get_pending_resets_count()
+        st.markdown(f"**Pending Password Resets:** `{pending_resets}`")
+        st.write(f"Reset Link Token Expiry: **{Config.PASSWORD_RESET_EXPIRY_MINUTES} minutes**")
+        st.write(f"Retrain Threshold: **{Config.FEEDBACK_RETRAIN_THRESHOLD} feedbacks**")
+        
+    with sec_col3:
+        pending_notifs = get_pending_notifications_count()
+        st.markdown(f"**Pending Connections Queue:** `{pending_notifs}`")
+        st.write("Digest Dispatch: **Manual/Triggered**")
+        st.write(f"Auth Protocol: **bcrypt + Salt Hashing**")
+
+
+def render_recommendation_quality(system):
+    """
+    Phase 7.9 — Recommendation Quality Audit for Admin.
+    Displays:
+    - Top recommended professions and career goals (bar charts)
+    - Profession Diversity Index (normalized entropy)
+    - Recommendation Distribution by Profession
+    - Average final recommendation score
+    - Acceptance Rate breakdown
+    Uses recommendation_history.csv for accurate post-hoc audit.
+    """
+    import math
+    from src.utils.data_manager import load_recommendation_history
+
+    st.markdown('<div class="gradient-header">Recommendation Quality Audit</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Post-hoc analysis of recommendation diversity, quality, and acceptance patterns</div>', unsafe_allow_html=True)
+
+    users_df = system["users_df"]
+    feedback_df = system["feedback_df"]
+
+    # Load recommendation history
+    history_df = load_recommendation_history()
+
+    if history_df.empty:
+        st.warning("No recommendation history found. Ask users to generate recommendations first.")
+        return
+
+    # Merge history with user profiles to get profession/career_goal of recommended users
+    rec_merged = history_df.merge(
+        users_df[["user_id", "profession", "career_goal", "location"]].rename(columns={"user_id": "recommended_user_id"}),
+        on="recommended_user_id",
+        how="left"
+    )
+
+    st.markdown("---")
+
+    # ── Summary KPIs ──────────────────────────────────────────────────────────
+    total_recs = len(history_df)
+    unique_users_served = history_df["user_id"].nunique()
+    unique_candidates = history_df["recommended_user_id"].nunique()
+    avg_score = history_df["score"].mean() if "score" in history_df.columns else 0.0
+
+    kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+    with kpi1:
+        st.metric("Total Recommendations", f"{total_recs:,}")
+    with kpi2:
+        st.metric("Users Served", f"{unique_users_served:,}")
+    with kpi3:
+        st.metric("Unique Candidates Shown", f"{unique_candidates:,}")
+    with kpi4:
+        st.metric("Avg Score", f"{avg_score:.1f}%" if avg_score > 0 else "N/A")
+
+    st.markdown("<br/>", unsafe_allow_html=True)
+
+    # ── Profession Distribution ───────────────────────────────────────────────
+    st.markdown("### 🏢 Recommendation Distribution by Profession")
+    if "profession" in rec_merged.columns:
+        prof_counts = rec_merged["profession"].value_counts().reset_index()
+        prof_counts.columns = ["Profession", "Count"]
+
+        # Profession Diversity Index (normalized Shannon entropy)
+        total = prof_counts["Count"].sum()
+        probs = prof_counts["Count"] / total
+        raw_entropy = -sum(p * math.log(p) for p in probs if p > 0)
+        max_entropy = math.log(len(prof_counts)) if len(prof_counts) > 1 else 1
+        diversity_index = raw_entropy / max_entropy if max_entropy > 0 else 0
+
+        div_col, chart_col = st.columns([1, 3])
+        with div_col:
+            color = "#10b981" if diversity_index >= 0.75 else ("#f59e0b" if diversity_index >= 0.5 else "#ef4444")
+            rating = "High" if diversity_index >= 0.75 else ("Moderate" if diversity_index >= 0.5 else "Low")
+            st.markdown(f"""
+            <div style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; text-align: center; margin-top: 10px;">
+                <div style="font-size: 2rem; font-weight: bold; color: {color};">{diversity_index:.2f}</div>
+                <div style="color: #94a3b8; font-size: 0.8rem; margin-top: 4px;">Profession Diversity Index</div>
+                <div style="color: {color}; font-size: 0.75rem; margin-top: 6px; font-weight: 600;">{rating} Diversity</div>
+                <div style="color: #64748b; font-size: 0.7rem; margin-top: 4px;">(0=concentrated, 1=uniform)</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with chart_col:
+            fig_prof = px.bar(
+                prof_counts.head(10),
+                x="Count",
+                y="Profession",
+                orientation="h",
+                color="Count",
+                color_continuous_scale="blues",
+                title="Top 10 Recommended Professions"
+            )
+            fig_prof.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="#cbd5e1"),
+                yaxis=dict(autorange="reversed"),
+                margin=dict(l=0, r=10, t=40, b=10),
+                coloraxis_showscale=False,
+            )
+            fig_prof.update_traces(marker_line_width=0)
+            st.plotly_chart(fig_prof, use_container_width=True)
+
+    # ── Career Goal Distribution ──────────────────────────────────────────────
+    st.markdown("### 🎯 Top Recommended Career Goals")
+    if "career_goal" in rec_merged.columns:
+        goal_counts = rec_merged["career_goal"].value_counts().reset_index()
+        goal_counts.columns = ["Career Goal", "Count"]
+
+        fig_goal = px.bar(
+            goal_counts.head(8),
+            x="Career Goal",
+            y="Count",
+            color="Count",
+            color_continuous_scale="purples",
+            title="Distribution of Career Goals in Recommendations"
+        )
+        fig_goal.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="#cbd5e1"),
+            margin=dict(l=0, r=10, t=40, b=10),
+            coloraxis_showscale=False,
+        )
+        fig_goal.update_traces(marker_line_width=0)
+        st.plotly_chart(fig_goal, use_container_width=True)
+
+    # ── Acceptance Rate by Profession ──────────────────────────────────────────
+    st.markdown("### ✅ Acceptance Rate by Profession")
+    if not feedback_df.empty and "profession" in rec_merged.columns:
+        # Merge feedback with profession info
+        fb_merged = feedback_df.merge(
+            users_df[["user_id", "profession"]].rename(columns={"user_id": "target_user_id"}),
+            on="target_user_id",
+            how="left"
+        ) if "target_user_id" in feedback_df.columns else pd.DataFrame()
+
+        if not fb_merged.empty and "profession" in fb_merged.columns:
+            acc_by_prof = fb_merged.groupby("profession")["action"].agg(
+                Accepted=lambda x: (x == 1).sum(),
+                Total="count"
+            ).reset_index()
+            acc_by_prof["Acceptance Rate (%)"] = (acc_by_prof["Accepted"] / acc_by_prof["Total"] * 100).round(1)
+            acc_by_prof = acc_by_prof.sort_values("Acceptance Rate (%)", ascending=False).head(10)
+
+            fig_acc = px.bar(
+                acc_by_prof,
+                x="Acceptance Rate (%)",
+                y="profession",
+                orientation="h",
+                color="Acceptance Rate (%)",
+                color_continuous_scale="greens",
+                title="Acceptance Rate by Recommended Profession"
+            )
+            fig_acc.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(color="#cbd5e1"),
+                yaxis=dict(autorange="reversed"),
+                margin=dict(l=0, r=10, t=40, b=10),
+                coloraxis_showscale=False,
+            )
+            fig_acc.update_traces(marker_line_width=0)
+            st.plotly_chart(fig_acc, use_container_width=True)
+        else:
+            st.info("Feedback data does not contain target_user_id column. Skipping per-profession acceptance chart.")
+    else:
+        st.info("Insufficient feedback data for profession-level acceptance analysis.")
+
+    # ── Recommendation Collapse Detection ─────────────────────────────────────
+    st.markdown("### 🔁 Repeated Recommendation Detection")
+    if "recommended_user_id" in history_df.columns and "user_id" in history_df.columns:
+        repeat_df = history_df.groupby(["user_id", "recommended_user_id"]).size().reset_index(name="Times Shown")
+        repeat_df = repeat_df[repeat_df["Times Shown"] > 1].sort_values("Times Shown", ascending=False)
+        if repeat_df.empty:
+            st.success("✅ No repeated recommendations detected.")
+        else:
+            st.warning(f"⚠️ {len(repeat_df)} user-candidate pairs have been recommended more than once.")
+            st.dataframe(repeat_df.head(20), width='stretch', hide_index=True)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 8.8 — System Monitoring Dashboard
+# ─────────────────────────────────────────────────────────────────────────────
+def render_system_monitoring(system):
+    """
+    Phase 8.8 — System Monitoring Dashboard.
+    Shows KPIs, active users, health status (Green/Amber/Red), and recent activity.
+    """
+    from datetime import datetime, timedelta
+    from src.utils.data_manager import load_recommendation_history
+
+    st.markdown('<div class="gradient-header">System Monitoring</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Real-time platform health, activity metrics, and operational status</div>', unsafe_allow_html=True)
+
+    users_df = system["users_df"]
+    feedback_df = system["feedback_df"]
+    metadata = ModelManager.load_metadata()
+    cred_df = load_credentials_raw()
+    history_df = load_recommendation_history()
+
+    total_users = len(users_df)
+    total_feedback = len(feedback_df)
+    acceptance_rate = feedback_df["action"].mean() * 100 if not feedback_df.empty else 0.0
+    total_recs = len(history_df)
+    feedback_rows_at_train = int(metadata.get("feedback_rows_at_train", 0)) if metadata else 0
+    pending_feedback = max(total_feedback - feedback_rows_at_train, 0)
+    last_trained_at = metadata.get("last_trained_at", "Never") if metadata else "Never"
+
+    # Active users: logged in within last 30 days
+    active_count = 0
+    if "last_login" in cred_df.columns:
+        cutoff = datetime.now() - timedelta(days=30)
+        try:
+            cred_df["_ll"] = pd.to_datetime(cred_df["last_login"], errors="coerce")
+            active_count = int((cred_df["_ll"] >= cutoff).sum())
+        except Exception:
+            active_count = 0
+
+    # ── KPI Row ──────────────────────────────────────────────────────────────
+    st.markdown("---")
+    k1, k2, k3, k4, k5, k6 = st.columns(6)
+    with k1: st.metric("Total Users", f"{total_users:,}")
+    with k2: st.metric("Active (30d)", f"{active_count:,}")
+    with k3: st.metric("Recs Generated", f"{total_recs:,}")
+    with k4: st.metric("Feedback Rows", f"{total_feedback:,}")
+    with k5: st.metric("Acceptance Rate", f"{acceptance_rate:.1f}%")
+    with k6: st.metric("Pending Feedback", f"{pending_feedback:,}")
+
+    st.markdown("<br/>", unsafe_allow_html=True)
+
+    # ── System Health Status ──────────────────────────────────────────────────
+    st.markdown("### System Health Status")
+    model_ok = (MODEL_DIR / "feedback_model.pkl").exists()
+    tfidf_ok = (MODEL_DIR / "tfidf_vectorizer.pkl").exists()
+    from src.utils.config import Config
+    from src.utils.email_service import check_smtp_status
+    smtp_ok, smtp_msg = check_smtp_status()
+
+    issues = []
+    warnings = []
+    if not model_ok: issues.append("Feedback model file missing")
+    if not tfidf_ok: issues.append("TF-IDF vectorizer file missing")
+    if pending_feedback > Config.FEEDBACK_RETRAIN_THRESHOLD:
+        warnings.append(f"Pending feedback ({pending_feedback}) exceeds retrain threshold ({Config.FEEDBACK_RETRAIN_THRESHOLD})")
+    if not Config.ENABLE_EMAILS:
+        warnings.append("Email service is disabled in .env")
+
+    if issues:
+        health_color = "#ef4444"; health_label = "RED — Critical Issues"; health_icon = "🔴"
+    elif warnings:
+        health_color = "#f59e0b"; health_label = "AMBER — Warnings"; health_icon = "🟡"
+    else:
+        health_color = "#10b981"; health_label = "GREEN — All Systems Operational"; health_icon = "🟢"
+
+    st.markdown(f"""
+    <div style="background: rgba(15,23,42,0.5); border: 2px solid {health_color}40; border-radius: 12px; padding: 16px; margin-bottom: 16px;">
+        <div style="font-size: 1.2rem; font-weight: bold; color: {health_color};">{health_icon} {health_label}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    hc1, hc2 = st.columns(2)
+    with hc1:
+        st.markdown("**Component Status**")
+        st.write(f"Feedback Model: **{'OK' if model_ok else 'MISSING'}**")
+        st.write(f"TF-IDF Vectorizer: **{'OK' if tfidf_ok else 'MISSING'}**")
+        st.write(f"Email (SMTP): **{'Connected' if smtp_ok else 'Offline'}** — {smtp_msg}")
+        st.write(f"Last Retrain: **{last_trained_at}**")
+    with hc2:
+        if issues:
+            st.error("Critical Issues:\n" + "\n".join(f"• {i}" for i in issues))
+        if warnings:
+            st.warning("Warnings:\n" + "\n".join(f"• {w}" for w in warnings))
+        if not issues and not warnings:
+            st.success("No issues detected.")
+
+    # ── Recent Activity from Audit Log ───────────────────────────────────────
+    st.markdown("### Recent Activity (Last 20 Events)")
+    audit_df = load_audit_log(limit=20)
+    if audit_df.empty:
+        st.info("No audit events recorded yet.")
+    else:
+        st.dataframe(audit_df[["timestamp", "user_id", "event_type", "details"]], width='stretch', hide_index=True)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 8.6 — Admin User Management
+# ─────────────────────────────────────────────────────────────────────────────
+def render_user_management(system):
+    """
+    Phase 8.6 — Admin User Management.
+    View all users with Role, Status, Last Login, Registration Date, Completeness.
+    Enable/Disable accounts. Reset passwords.
+    """
+    st.markdown('<div class="gradient-header">User Management</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Manage user accounts, roles, access control, and profile completeness</div>', unsafe_allow_html=True)
+
+    users_df = system["users_df"]
+    feedback_df = system["feedback_df"]
+    cred_df = load_credentials_raw()
+
+    if cred_df.empty:
+        st.warning("No credentials found.")
+        return
+
+    st.markdown("---")
+
+    # ── Search & Filter ───────────────────────────────────────────────────────
+    search_col, role_col = st.columns([3, 1])
+    with search_col:
+        search_q = st.text_input("Search by username or user ID", key="um_search")
+    with role_col:
+        role_filter = st.selectbox("Filter by Role", ["All", "user", "admin"], key="um_role")
+
+    filtered = cred_df.copy()
+    if search_q.strip():
+        q = search_q.strip().lower()
+        filtered = filtered[
+            filtered["username"].str.lower().str.contains(q, na=False) |
+            filtered["user_id"].str.lower().str.contains(q, na=False)
+        ]
+    if role_filter != "All":
+        filtered = filtered[filtered["role"] == role_filter]
+
+    st.markdown(f"**Showing {len(filtered)} of {len(cred_df)} accounts**")
+
+    # ── User Table ─────────────────────────────────────────────────────────────
+    for _, cred_row in filtered.iterrows():
+        uid = str(cred_row["user_id"])
+        username = str(cred_row.get("username", ""))
+        role = str(cred_row.get("role", "user"))
+        last_login = str(cred_row.get("last_login", "Never"))
+        created_at = str(cred_row.get("created_at", ""))
+        failed_att = int(cred_row.get("failed_attempts", 0) or 0)
+        locked, lock_mins = is_account_locked(cred_row)
+        is_disabled = str(cred_row.get("locked_until", "")).strip() == "9999-12-31T23:59:59"
+
+        status_label = "Disabled" if is_disabled else ("Locked" if locked else "Active")
+        status_color = "#ef4444" if is_disabled else ("#f59e0b" if locked else "#10b981")
+
+        # Profile completeness
+        profile_match = users_df[users_df["user_id"] == uid]
+        if not profile_match.empty:
+            completeness, _ = calculate_profile_completeness(profile_match.iloc[0].to_dict())
+        else:
+            completeness = 0.0
+
+        # Feedback stats
+        user_fb = feedback_df[feedback_df["user_id"] == uid] if not feedback_df.empty else pd.DataFrame()
+        fb_count = len(user_fb)
+        acc_rate = (user_fb["action"].mean() * 100) if fb_count > 0 else 0.0
+
+        with st.expander(f"{username} ({uid}) — {role.upper()} — {status_label}", expanded=False):
+            info_c, action_c = st.columns([3, 2])
+
+            with info_c:
+                st.markdown(f"""
+                | Field | Value |
+                |-------|-------|
+                | **Username** | {username} |
+                | **User ID** | `{uid}` |
+                | **Role** | {role} |
+                | **Status** | <span style="color:{status_color};">**{status_label}**</span> |
+                | **Last Login** | {last_login if last_login not in ('', 'nan') else 'Never'} |
+                | **Registered** | {created_at if created_at not in ('', 'nan') else 'Unknown'} |
+                | **Failed Attempts** | {failed_att} |
+                | **Profile Completeness** | {completeness:.0f}% |
+                | **Feedback Count** | {fb_count} |
+                | **Acceptance Rate** | {acc_rate:.1f}% |
+                """, unsafe_allow_html=True)
+
+            with action_c:
+                st.markdown("**Account Actions**")
+
+                if uid != "ADMIN":
+                    if is_disabled:
+                        if st.button(f"Enable Account", key=f"enable_{uid}"):
+                            enable_account(uid)
+                            log_event("ADMIN", "ACCOUNT_ENABLED", f"uid={uid}")
+                            st.success(f"Account {uid} enabled.")
+                            st.rerun()
+                    else:
+                        if st.button(f"Disable Account", key=f"disable_{uid}", type="primary"):
+                            disable_account(uid)
+                            log_event("ADMIN", "ACCOUNT_DISABLED", f"uid={uid}")
+                            st.warning(f"Account {uid} disabled.")
+                            st.rerun()
+
+                st.markdown("**Reset Password**")
+                new_pw = st.text_input("New password", type="password", key=f"newpw_{uid}")
+                if st.button("Apply Reset", key=f"reset_pw_{uid}"):
+                    if len(new_pw) < 8:
+                        st.error("Password must be at least 8 characters.")
+                    else:
+                        h = hash_password(new_pw)
+                        update_password_hash(uid, h)
+                        log_event("ADMIN", "PASSWORD_RESET", f"Admin reset password for uid={uid}")
+                        st.success("Password updated successfully.")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 8.11 — Data Management (Export / Backup)
+# ─────────────────────────────────────────────────────────────────────────────
+def render_data_management(system):
+    """
+    Phase 8.11 — Data Management.
+    Admin download buttons for all CSV data files. Read-only. No deletion.
+    """
+    st.markdown('<div class="gradient-header">Data Management</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Export and backup system data. All operations are read-only.</div>', unsafe_allow_html=True)
+    st.markdown("---")
+
+    files = {
+        "feedback.csv": ("Feedback Data", "All user feedback records (Accept/Reject)"),
+        "recommendation_history.csv": ("Recommendation History", "Full recommendation batch log"),
+        "user_profiles.csv": ("User Profiles", "Registered user profile data"),
+        "audit_log.csv": ("Audit Log", "Complete security and activity audit trail"),
+        "credentials.csv": ("Credentials (Hashed)", "bcrypt-hashed credentials — no plaintext passwords"),
+        "password_reset_tokens.csv": ("Reset Tokens", "Active and expired password reset tokens"),
+    }
+
+    for filename, (label, desc) in files.items():
+        filepath = DATA_DIR / filename
+        with st.container():
+            row_c1, row_c2 = st.columns([4, 1])
+            with row_c1:
+                st.markdown(f"**{label}** — `{filename}`")
+                st.caption(desc)
+                if filepath.exists():
+                    size_kb = filepath.stat().st_size / 1024
+                    st.caption(f"Size: {size_kb:.1f} KB")
+                else:
+                    st.caption("File not yet created.")
+            with row_c2:
+                if filepath.exists():
+                    with open(filepath, "rb") as f:
+                        st.download_button(
+                            label=f"Download",
+                            data=f.read(),
+                            file_name=filename,
+                            mime="text/csv",
+                            key=f"dl_{filename}"
+                        )
+                else:
+                    st.button("Unavailable", key=f"dl_na_{filename}", disabled=True)
+            st.markdown("---")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 8.7 — Audit Log Viewer (Admin)
+# ─────────────────────────────────────────────────────────────────────────────
+def render_audit_log_viewer(system):
+    """
+    Phase 8.7 — Audit Log Viewer.
+    Paginated, filterable view of data/audit_log.csv for admin review.
+    """
+    st.markdown('<div class="gradient-header">Audit Log</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Security and activity audit trail — all critical platform events</div>', unsafe_allow_html=True)
+    st.markdown("---")
+
+    f1, f2, f3 = st.columns([2, 2, 1])
+    with f1:
+        event_types = ["All"] + get_audit_event_types()
+        selected_event = st.selectbox("Filter by Event Type", event_types, key="audit_event_filter")
+    with f2:
+        uid_filter = st.text_input("Filter by User ID", key="audit_uid_filter")
+    with f3:
+        page_size = st.selectbox("Rows per page", [50, 100, 200], key="audit_page_size")
+
+    audit_df = load_audit_log(
+        event_type_filter=selected_event,
+        user_id_filter=uid_filter,
+        limit=page_size
+    )
+
+    st.markdown(f"**Showing {len(audit_df)} records** (most recent first)")
+
+    if audit_df.empty:
+        st.info("No audit events match the selected filters.")
+    else:
+        # Color-code event types
+        def style_row(row):
+            colors = {
+                "LOGIN": "background-color: rgba(16,185,129,0.06)",
+                "LOGOUT": "background-color: rgba(100,116,139,0.06)",
+                "LOGIN_FAILED": "background-color: rgba(239,68,68,0.08)",
+                "ACCOUNT_LOCKED": "background-color: rgba(239,68,68,0.12)",
+                "REGISTER": "background-color: rgba(59,130,246,0.06)",
+                "ADMIN_RETRAIN": "background-color: rgba(168,85,247,0.08)",
+                "ERROR": "background-color: rgba(239,68,68,0.10)",
+            }
+            et = str(row["event_type"])
+            color = colors.get(et, "")
+            return [color] * len(row)
+
+        st.dataframe(
+            audit_df[["timestamp", "user_id", "event_type", "details"]],
+            width='stretch',
+            hide_index=True,
+        )
+
+        # Download audit log
+        csv_data = audit_df.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            label="Download Filtered Log",
+            data=csv_data,
+            file_name="audit_log_filtered.csv",
+            mime="text/csv",
+            key="audit_download_btn"
+        )

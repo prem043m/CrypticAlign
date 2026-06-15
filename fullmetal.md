@@ -768,48 +768,66 @@ The complete end-to-end flow in one sequence is:
 - no collaborative filtering component
 - no deep learning embeddings
 - frontend loader path appears incomplete in current repo state
-- production deployment and continuous monitoring are only partially implemented
 
 ---
 
 ## 9. Final Evaluation
 
-This project is best understood as a **hybrid ML recommender prototype with explainability and analytics**, not as a fully productionized MLOps platform.
+This project is now a **hardened, deployment-ready hybrid ML recommender prototype** equipped with robust security, trust indicators, error handling, administrative auditing, and deployment files.
 
-What is truly implemented well:
+What is fully implemented and production-ready:
 
-- objective definition
-- data preprocessing
-- feature engineering
-- supervised training
-- train/test evaluation
-- two-stage recommendation flow
-- model artifact persistence
+- **Objective definition & preprocessing**: Structured profiling with NLTK token cleaning.
+- **Supervised classification & feature engineering**: Logistic Regression with compatibility metrics.
+- **Two-stage recommendation flow**: TF-IDF retrieval candidate generation + ML classifier re-ranking.
+- **Explainability & Diversity (Phase 7)**: Clear textual reasons, strengths/weaknesses, profession diversity filtering, and recommendation freshness decay using recent match logs.
+- **Production Hardening (Phase 8)**: Bcrypt password hashing, session expiry (60m inactivity), audit log writing (LOGIN, PROFILE_UPDATE, RETRAIN, etc.), system monitoring dashboards (KPI metrics, components check, SMTP tests), user preferences, and Render.com configuration.
 
-What is partially implemented:
+---
 
-- local UI deployment
-- model analytics dashboards
-- explainability layer
+## 10. Phase 7 — Recommendation Quality, Explainability & User Trust Enhancement
 
-What is not fully implemented:
+Phase 7 addressed the black-box nature of the machine learning recommendations by introducing trust elements, explainable metrics, diversity controls, and candidate freshness:
 
-- production-grade deployment
-- continuous monitoring
-- automated retraining
-- real user event ingestion
+### 10.1 Explanation Engine
+- Implemented in `src/utils/explanation_engine.py`.
+- Generates a textual summary, clear reasons for the recommendation (e.g. TF-IDF threshold match, MBTI compatibility), shared skills list, and specific strengths/weaknesses.
 
-In short, this repository is very strong as a learning project for understanding **how an ML recommendation system executes internally**, especially:
+### 10.2 Recommendation Freshness
+- Uses `data/recommendation_history.csv` to track what profiles a user has seen.
+- Applies a decay penalty to recently recommended candidates to prevent recommendation fatigue and presentation collapse.
 
-- how raw profile data becomes vectors
-- how vectors become compatibility features
-- how features become a training dataset
-- how a classifier learns acceptance behavior
-- how hybrid retrieval and ML reranking work together
+### 10.3 Diversity Filtering
+- Restricts recommendable professionals to a maximum of `MAX_SAME_PROFESSION` per batch.
+- Configurable through toggles (`ENABLE_DIVERSITY_FILTER`).
+- Audits diversity via the **Profession Diversity Index** and distribution bar chart inside the admin recommendations quality dashboard.
 
-If you want, the next best step after this document would be to create a second file that turns this into:
+---
 
-- a true system-design diagram
-- a sequence diagram
-- and a file-by-file execution trace with call hierarchy
+## 11. Phase 8 — Production Hardening, Authentication & Email Workflows
+
+Phase 8 transformed the application into a SaaS-ready platform by implementing enterprise-grade security and administrative tools:
+
+### 11.1 Security & Authentication Hardening
+- **Bcrypt Hashing**: Credentials stored in `data/credentials.csv` using bcrypt instead of legacy SHA-256.
+- **Account Lockouts**: Temporarily locks account for 15 minutes after 5 consecutive failed login attempts.
+- **Session Expiry**: Automates logout by tracking last active timestamp and checking age (60 minutes inactivity threshold).
+
+### 11.2 Centralized Logging & Audit Trail
+- Log records appended to `data/audit_log.csv`.
+- Captures login actions, profile changes, model retraining events, and errors.
+- Includes a dedicated Admin Audit Log Viewer with pagination and filter support.
+
+### 11.3 System Monitoring & Data Management
+- Admin dashboard displaying platform KPIs (acceptance rates, active users, pending feedback count).
+- Color-coded System Health status indicator (Green/Amber/Red) running automated SMTP connection checks and model existence checks.
+- Granular User Management view (enable/disable account, force password updates, profile completeness ratios).
+- Safe, read-only Data Management portal for exporting CSV backups.
+
+### 11.4 Notification Preferences
+- Allows users to opt in/out of Welcome Emails, Recommendation Digests, and System Notifications.
+- Saves preferences directly in `data/user_profiles.csv` and honors them across email send routines.
+
+### 11.5 Deployment readiness
+- Render.com blueprints (`render.yaml`), python runtime specs (`runtime.txt`), streamlit settings (`.streamlit/config.toml`), and a detailed setup guide (`DEPLOYMENT.md`).
 

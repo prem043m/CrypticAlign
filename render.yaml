@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: nexmatch-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run src/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: APP_NAME
+        value: NexMatch AI
+      - key: APP_ENV
+        value: production
+      - key: APP_VERSION
+        value: 1.0.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENABLE_EMAILS
+        value: "false"
+      - key: ENABLE_SIGNUPS
+        value: "true"
+      - key: ENABLE_PASSWORD_RESET
+        value: "true"
+      - key: PASSWORD_RESET_EXPIRY_MINUTES
+        value: "30"
+      - key: FEEDBACK_RETRAIN_THRESHOLD
+        value: "50"
+      - key: ADMIN_NAME
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_EMAIL
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false

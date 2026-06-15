@@ -74,7 +74,7 @@ else:
         }
     ).copy()
     display_df["Action"] = display_df["Action"].map({1: "Accept", 0: "Reject"})
-    st.dataframe(display_df, use_container_width=True, height=400)
+    st.dataframe(display_df, width='stretch', height=400)
 
 st.markdown("### Latest Training Snapshot")
 if metadata:
@@ -86,6 +86,6 @@ if metadata:
             {"Metric": "Last Accuracy", "Value": f"{metadata.get('accuracy', 0.0) * 100:.2f}%"},
         ]
     )
-    st.dataframe(metadata_df, use_container_width=True, hide_index=True)
+    st.dataframe(metadata_df, width='stretch', hide_index=True)
 else:
     st.warning("No training metadata found yet. Retrain the model once from System Status to initialize deployment tracking.")

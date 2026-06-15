@@ -1,18 +1,22 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
+from src.utils.audit_logger import log_event
 
-import streamlit as st
-import pandas as pd
+_LOGO_PATH = Path(__file__).resolve().parent.parent / "icon.png"
 
 def render_sidebar(users_df: pd.DataFrame):
     """
     Renders a unified sidebar for NexMatch AI, managing the portal selector
     and active user context based on user credentials and roles.
     """
+    # Logo at top of sidebar
+    if _LOGO_PATH.exists():
+        st.sidebar.image(str(_LOGO_PATH), width=56)
     st.sidebar.markdown("""
     <div style='text-align: center; margin-bottom: 20px;'>
-        <h2 style='margin-bottom: 0px;'>🧠 NexMatch AI</h2>
-        <small style='color: #94a3b8;'>v1.0.0 | Production Ready</small>
+        <h2 style='margin-bottom: 0px;'>NexMatch AI</h2>
+        <small style='color: #94a3b8;'>v1.0.6 | Production Ready</small>
     </div>
     """, unsafe_allow_html=True)
 
@@ -102,7 +106,9 @@ def render_sidebar(users_df: pd.DataFrame):
 
     # 3. Log out button
     st.sidebar.markdown("<br/><br/>", unsafe_allow_html=True)
-    if st.sidebar.button("🚪 Log Out", key="sidebar_logout_btn"):
+    if st.sidebar.button("Logout", key="sidebar_logout_btn"):
+        uid = st.session_state.get("user_id", "UNKNOWN")
+        log_event(uid, "LOGOUT", f"User {st.session_state.get('username', '')} logged out")
         st.session_state.clear()
         st.rerun()
 

@@ -1,0 +1,8 @@
+notification_id,user_id,matched_user_id,type,status,created_at
+N0001,U303,U232,mutual_match,pending,2026-06-15T15:27:36.826975
+N0002,U303,U143,mutual_match,pending,2026-06-15T15:27:36.868804
+N0003,U303,U140,mutual_match,pending,2026-06-15T15:27:36.893257
+N0004,U303,U232,mutual_match,pending,2026-06-15T16:23:58.628728
+N0005,U303,U143,mutual_match,pending,2026-06-15T16:23:58.656278
+N0006,U303,U077,mutual_match,pending,2026-06-15T16:23:58.680706
+N0007,U303,U052,mutual_match,pending,2026-06-15T16:23:58.703401

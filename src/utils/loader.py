@@ -36,6 +36,11 @@ def get_users() -> pd.DataFrame:
     if user_profiles_path.exists() and user_profiles_path.stat().st_size > 0:
         try:
             profiles_df = pd.read_csv(user_profiles_path)
+            # Add columns from profiles_df that aren't in users_df (e.g., notification preferences)
+            for col in profiles_df.columns:
+                if col not in users_df.columns:
+                    users_df[col] = None
+                    
             for col in users_df.columns:
                 if col not in profiles_df.columns:
                     if col == "age":

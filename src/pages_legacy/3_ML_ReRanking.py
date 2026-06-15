@@ -110,7 +110,7 @@ with col1:
         })
     pool_df = pd.DataFrame(pool_rows)
     
-    st.dataframe(pool_df, height=380, use_container_width=True)
+    st.dataframe(pool_df, height=380, width='stretch')
 
 with col2:
     st.markdown("### 🤖 Stage 2: ML Re-Ranking (Scoring)")
@@ -128,7 +128,7 @@ with col2:
         })
     rec_df = pd.DataFrame(rec_rows)
     
-    st.dataframe(rec_df, height=220, use_container_width=True)
+    st.dataframe(rec_df, height=220, width='stretch')
     
     # Show highest conversion match badge
     if final_recs:
