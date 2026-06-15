@@ -8,16 +8,9 @@ import nltk
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from src.utils.nltk_helper import ensure_nltk_resources
 
-try:
-    stopwords.words("english")
-except LookupError:
-    nltk.download("stopwords")
-
-try:
-    nltk.data.find("corpora/wordnet")
-except LookupError:
-    nltk.download("wordnet")
+ensure_nltk_resources()
 
 stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()

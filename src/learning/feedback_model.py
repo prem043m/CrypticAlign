@@ -17,11 +17,15 @@ from sklearn.metrics import (
 
 import pandas as pd
 
+from src.utils.model_manager import (
+    ModelManager
+)
+
 class FeedbackModel:
 
-    def __init__(self):
+    def __init__(self, model=None):
 
-        self.model = LogisticRegression(
+        self.model = model or LogisticRegression(
             class_weight="balanced",
             random_state=42,
             max_iter=1000
@@ -52,6 +56,10 @@ class FeedbackModel:
             y_train
         )
 
+        ModelManager.save_model(
+            self.model,
+            "feedback_model.pkl"
+        )
         predictions = (
             self.model.predict(X_test)
         )

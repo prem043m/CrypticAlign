@@ -1,104 +1,67 @@
-# TF-IDF Vectorization
-# Store vectors
-# Generate feature matrix
-
 import pandas as pd
-
-from sklearn.feature_extraction.text import (
-    TfidfVectorizer
-)
-
-from src.preprocessing.text_preprocessor import (
-    clean_text
-)
-
+from sklearn.feature_extraction.text import TfidfVectorizer
+from src.preprocessing.text_preprocessor import clean_text
+from src.utils.model_manager import ModelManager
 
 class TFIDFEncoder:
+    """Encodes user profiles into TF‑IDF vectors.
 
-    def __init__(self):
+    The encoder builds a composite ``profile_text`` column from raw user fields,
+    fits a ``TfidfVectorizer`` and persists only the vectorizer. The TF‑IDF matrix
+    is recomputed at runtime wherever needed, avoiding large pickle files.
+    """
 
-        self.vectorizer = TfidfVectorizer(
-            max_features=5000
-        )
-
+    def __init__(self, max_features: int = 5000):
+        self.vectorizer = TfidfVectorizer(max_features=max_features)
         self.tfidf_matrix = None
         self.users_df = None
 
-    def fit(self, users_path):
+    @staticmethod
+    def build_profile_text(users_df: pd.DataFrame) -> pd.DataFrame:
 
-        self.users_df = pd.read_csv(
-            users_path
-        )
+        def safe_column(column_name: str):
 
-        self.users_df[
-            "profile_text"
-        ] = (
+            if column_name in users_df.columns:
+                return users_df[column_name].fillna("").astype(str)
 
-            self.users_df[
-                "professional_summary"
-            ].fillna("")
-            + " "
-
-            + self.users_df[
-                "about_me"
-            ].fillna("")
-            + " "
-
-            + self.users_df[
-                "career_goal"
-            ].fillna("")
-            + " "
-
-            + self.users_df[
-                "interests"
-            ].fillna("").str.replace(",", " ")
-            
-            + " "
-            
-            + self.users_df[
-                "profession"
-            ].fillna("")
-            
-            + " "
-            
-            + self.users_df[
-                "skills"
-            ].fillna("").str.replace(",", " ")
-            
-            + " "
-            
-            + self.users_df[
-                "education"
-            ].fillna("")
-            
-            + " "
-            
-            + self.users_df[
-                "traits"
-            ].fillna("").str.replace(",", " ")
-            
-            + " "
-            
-            + self.users_df[
-                "networking_intent"
-            ].fillna("")
-        )
-
-        self.users_df[
-            "profile_text"
-        ] = self.users_df[
-            "profile_text"
-        ].apply(clean_text)
-
-        self.tfidf_matrix = (
-            self.vectorizer.fit_transform(
-                self.users_df[
-                    "profile_text"
-                ]
+            return pd.Series(
+                [""] * len(users_df),
+                index=users_df.index
             )
+
+        users_df["profile_text"] = (
+
+            safe_column("professional_summary") + " "
+            + safe_column("about_me") + " "
+            + safe_column("career_goal") + " "
+            + safe_column("interests").str.replace(",", " ") + " "
+            + safe_column("profession") + " "
+            + safe_column("skills").str.replace(",", " ") + " "
+            + safe_column("education") + " "
+            + safe_column("traits").str.replace(",", " ") + " "
+            + safe_column("networking_intent")
         )
 
-        return (
-            self.users_df,
-            self.tfidf_matrix
+        users_df["profile_text"] = (
+            users_df["profile_text"]
+            .apply(clean_text)
         )
+
+        return users_df
+
+    def fit(self, users_path: str):
+        """Fit the TF‑IDF vectorizer on a CSV of user profiles.
+
+        The function loads the CSV, builds the ``profile_text`` column using the
+        reusable static helper, fits the vectorizer, persists only the vectorizer,
+        and returns the enriched users dataframe together with the TF‑IDF matrix.
+        """
+        # Load raw user data.
+        self.users_df = pd.read_csv(users_path)
+        # Build the concatenated text column.
+        self.users_df = TFIDFEncoder.build_profile_text(self.users_df)
+        # Fit vectorizer and generate TF‑IDF matrix.
+        self.tfidf_matrix = self.vectorizer.fit_transform(self.users_df["profile_text"])
+        # Persist only the vectorizer for reuse.
+        ModelManager.save_model(self.vectorizer, "tfidf_vectorizer.pkl")
+        return self.users_df, self.tfidf_matrix

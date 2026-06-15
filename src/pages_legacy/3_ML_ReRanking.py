@@ -9,7 +9,9 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from src.utils.loader import load_system
+from src.utils.loader import refresh_feedback_views
 from src.utils.styles import load_css
+from src.utils.data_manager import append_feedback
 
 # Page Configuration
 st.set_page_config(
@@ -27,8 +29,8 @@ users_df = system["users_df"]
 adaptive = system["adaptive"]
 
 # Page titles
-st.markdown('<div class="gradient-header">Machine Learning Re-Ranking</div>', unsafe_allow_html=True)
-st.markdown('<div class="gradient-sub">Stage 2 Re-ranking: Enhancing matches with prediction probability trained on feedback loops</div>', unsafe_allow_html=True)
+st.markdown('<div class="gradient-header">My Recommendations</div>', unsafe_allow_html=True)
+st.markdown('<div class="gradient-sub">Stable recommendations powered by the latest deployed model. Feedback is saved instantly and only affects rankings after an admin retrains.</div>', unsafe_allow_html=True)
 
 # Select Active User
 if "selected_user" not in st.session_state:
@@ -64,15 +66,35 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+session_recs = st.session_state.get("recommendation_snapshots", {})
+snapshot = session_recs.get(selected_user_id)
+if snapshot is None:
+    with st.spinner("Processing deployed recommendation pipeline..."):
+        snapshot = {
+            "candidate_pool": adaptive.get_candidate_pool(selected_user_id, pool_size=30),
+            "final_recs": adaptive.get_top_recommendations(selected_user_id, top_n=5),
+        }
+    session_recs[selected_user_id] = snapshot
+    st.session_state["recommendation_snapshots"] = session_recs
+
+refresh_col1, refresh_col2 = st.columns([3, 1])
+with refresh_col1:
+    st.info("Recommendation cards stay fixed after Accept/Reject clicks. Use refresh only when you want to pull a new snapshot from the currently deployed model.")
+with refresh_col2:
+    if st.button("Refresh Snapshot", type="primary"):
+        with st.spinner("Refreshing recommendations from the deployed model..."):
+            session_recs[selected_user_id] = {
+                "candidate_pool": adaptive.get_candidate_pool(selected_user_id, pool_size=30),
+                "final_recs": adaptive.get_top_recommendations(selected_user_id, top_n=5),
+            }
+            st.session_state["recommendation_snapshots"] = session_recs
+        st.rerun()
+
+candidate_pool = snapshot["candidate_pool"]
+final_recs = snapshot["final_recs"]
+
 # Columns for Stage 1 and Stage 2 side-by-side
 col1, col2 = st.columns([1, 1])
-
-# Fetch data using Adaptive Recommender
-with st.spinner("Processing two-stage ranking pipeline..."):
-    # Stage 1 Candidates
-    candidate_pool = adaptive.get_candidate_pool(selected_user_id, pool_size=30)
-    # Stage 2 Final Matches
-    final_recs = adaptive.get_top_recommendations(selected_user_id, top_n=5)
 
 with col1:
     st.markdown("### 🎯 Stage 1: Candidate Generation (Retrieval)")
@@ -120,6 +142,40 @@ with col2:
             <span style="font-weight: 800; color: #34d399; font-size: 1.25rem; margin-top: 5px; display: inline-block;">Final Score: {best_rec['final_ranking_score']:.2f}%</span>
         </div>
         """, unsafe_allow_html=True)
+
+st.markdown("<br/>", unsafe_allow_html=True)
+st.markdown("### Feedback Loop")
+st.markdown("Accept/Reject actions are appended to `feedback.csv` immediately. They do not retrain the model or reshuffle this page until an admin manually retrains.")
+
+for idx, match in enumerate(final_recs):
+    target_name = users_df[users_df["user_id"] == match["user_id"]]["name"].iloc[0]
+    card_col, action_col1, action_col2 = st.columns([4, 1, 1])
+    with card_col:
+        st.markdown(
+            f"""
+            <div class="glass-card" style="padding: 14px; margin-bottom: 8px;">
+                <b>{target_name}</b> ({match['user_id']})<br/>
+                <span style="color: #94a3b8;">{match['profession']} | Final Score: {match['final_ranking_score']:.2f}%</span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+    with action_col1:
+        accepted = st.button("Accept", key=f"accept_{selected_user_id}_{match['user_id']}_{idx}")
+    with action_col2:
+        rejected = st.button("Reject", key=f"reject_{selected_user_id}_{match['user_id']}_{idx}")
+
+    if accepted:
+        append_feedback(selected_user_id, match["user_id"], 1)
+        refresh_feedback_views()
+        st.success(f"Saved accept feedback for {selected_user_id} -> {match['user_id']}.")
+        st.rerun()
+
+    if rejected:
+        append_feedback(selected_user_id, match["user_id"], 0)
+        refresh_feedback_views()
+        st.success(f"Saved reject feedback for {selected_user_id} -> {match['user_id']}.")
+        st.rerun()
 
 # Explanation panel about why this architecture is standard in production
 st.markdown("<br/>", unsafe_allow_html=True)

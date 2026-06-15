@@ -2,18 +2,13 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 import sys
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, roc_auc_score
 
 # Add project root to sys.path to enable imports
 project_root = Path(__file__).resolve().parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from src.utils.loader import load_system
-from src.utils.styles import load_css
-
-# Set Streamlit Page Configuration
+# Set Streamlit Page Configuration at the very first step
 st.set_page_config(
     page_title="NexMatch AI",
     page_icon="🧠",
@@ -21,169 +16,218 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Load styling
-load_css()
+from src.utils.loader import load_system, clear_system_caches
+from src.utils.styles import load_css
+from src.utils.sidebar import render_sidebar
+from src.utils.data_manager import (
+    authenticate_user,
+    register_credentials,
+    register_user_profile,
+    MBTI_OPTIONS,
+    NETWORKING_INTENT_OPTIONS
+)
+from src.views.user_portal import (
+    render_user_home,
+    render_user_profile,
+    render_user_recs,
+    render_user_feedback,
+    render_user_history
+)
+from src.views.admin_portal import (
+    render_admin_dashboard,
+    render_user_explorer,
+    render_model_analytics,
+    render_dataset_insights,
+    render_explainability,
+    render_system_status
+)
 
-# Load recommendation system components
-with st.spinner("Initializing NexMatch AI Recommendation Pipeline..."):
+# Render login / registration screen
+def render_login_screen():
+    load_css()
+    
+    st.markdown('<div class="gradient-header">NexMatch AI</div>', unsafe_allow_html=True)
+    st.markdown('<div class="gradient-sub">Intelligent Hybrid Professional Recommendation Platform</div>', unsafe_allow_html=True)
+    
+    tab1, tab2 = st.tabs(["🔒 Member Login", "🆕 Register Profile"])
+    
+    with tab1:
+        st.markdown("### Sign In to Your Account")
+        with st.form("login_form"):
+            username = st.text_input("Username").strip()
+            password = st.text_input("Password", type="password").strip()
+            login_btn = st.form_submit_button("Sign In", type="primary")
+            
+        if login_btn:
+            if not username or not password:
+                st.error("Please fill in both fields.")
+            else:
+                success, uid, role, msg = authenticate_user(username, password)
+                if success:
+                    st.session_state["authenticated"] = True
+                    st.session_state["username"] = username
+                    st.session_state["user_id"] = uid
+                    st.session_state["role"] = role
+                    st.session_state["portal"] = "User Portal" if role == "user" else "Admin Portal"
+                    st.success("Welcome back! Loading system...")
+                    st.rerun()
+                else:
+                    st.error(msg)
+                    
+    with tab2:
+        st.markdown("### Create Your Professional Profile")
+        with st.form("register_form"):
+            col1, col2 = st.columns(2)
+            with col1:
+                r_username = st.text_input("Account Username (Unique)").strip()
+                r_password = st.text_input("Account Password", type="password").strip()
+                name = st.text_input("Your Full Name").strip()
+                profession = st.text_input("Current Profession").strip()
+                location = st.text_input("Geographic Location (City)").strip()
+                experience_years = st.number_input("Years of Industry Experience", min_value=0, max_value=50, value=1)
+                mbti = st.selectbox("MBTI Personality Type", MBTI_OPTIONS, index=0)
+                
+            with col2:
+                career_goal = st.text_input("Primary Career Goal").strip()
+                networking_intent = st.selectbox("Networking Objective", NETWORKING_INTENT_OPTIONS, index=0)
+                skills = st.text_area("Core Skills (comma separated)").strip()
+                interests = st.text_area("Hobbies / Interests (comma separated)").strip()
+                professional_summary = st.text_area("Professional Summary").strip()
+                about_me = st.text_area("About Me").strip()
+                
+            register_btn = st.form_submit_button("Register & Create Profile", type="primary")
+            
+        if register_btn:
+            # Validations
+            required = [r_username, r_password, name, profession, location, career_goal, professional_summary, about_me]
+            if any(not val for val in required):
+                st.error("Please fill in all fields to register.")
+            else:
+                # Check username availability
+                from src.utils.data_manager import load_credentials_raw
+                creds = load_credentials_raw()
+                if not creds.empty and r_username.lower() in creds["username"].str.lower().tolist():
+                    st.error("Username already exists. Please choose a different one.")
+                else:
+                    profile = {
+                        "name": name,
+                        "profession": profession,
+                        "location": location,
+                        "experience_years": int(experience_years),
+                        "mbti": mbti,
+                        "career_goal": career_goal,
+                        "skills": skills,
+                        "interests": interests,
+                        "networking_intent": networking_intent,
+                        "professional_summary": professional_summary,
+                        "about_me": about_me
+                    }
+                    new_user_id = register_user_profile(profile)
+                    success, msg = register_credentials(r_username, r_password, new_user_id, role="user")
+                    if success:
+                        st.session_state["authenticated"] = True
+                        st.session_state["username"] = r_username
+                        st.session_state["user_id"] = new_user_id
+                        st.session_state["role"] = "user"
+                        st.session_state["portal"] = "User Portal"
+                        clear_system_caches()
+                        st.success("Profile created and logged in successfully!")
+                        st.rerun()
+                    else:
+                        st.error(msg)
+
+
+# --- View Wrapper Functions for st.navigation ---
+
+def user_home_view():
+    load_css()
     system = load_system()
+    render_user_home(system)
 
-# Extract models/data
-users_df = system["users_df"]
-feedback_df = system["feedback_df"]
-training_dataset = system["training_dataset"]
-feedback_model = system["feedback_model"]
+def user_profile_view():
+    load_css()
+    system = load_system()
+    render_user_profile(system)
 
-# Calculate core statistics
-total_users = len(users_df)
-total_feedback = len(feedback_df)
-acceptance_rate = (feedback_df["action"].mean()) * 100
+def user_recs_view():
+    load_css()
+    system = load_system()
+    render_user_recs(system)
 
-# Compute test metrics
-X = training_dataset.drop(columns=["label"])
-y = training_dataset["label"]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-predictions = feedback_model.model.predict(X_test)
-probabilities = feedback_model.model.predict_proba(X_test)[:, 1]
+def user_feedback_view():
+    load_css()
+    system = load_system()
+    render_user_feedback(system)
 
-accuracy = accuracy_score(y_test, predictions) * 100
-try:
-    roc_auc = roc_auc_score(y_test, probabilities)
-except Exception:
-    roc_auc = 0.0
+def user_history_view():
+    load_css()
+    system = load_system()
+    render_user_history(system)
 
-# Sidebar Title
-st.sidebar.markdown("""
-<div style='text-align: center; margin-bottom: 20px;'>
-    <h2 style='margin-bottom: 0px;'>🧠 NexMatch AI</h2>
-    <small style='color: #94a3b8;'>v1.0.0 | Production Ready</small>
-</div>
-""", unsafe_allow_html=True)
+def admin_dashboard_view():
+    load_css()
+    system = load_system()
+    render_admin_dashboard(system)
 
-# Main Title and Header
-st.markdown('<div class="gradient-header">NexMatch AI</div>', unsafe_allow_html=True)
-st.markdown('<div class="gradient-sub">Intelligent Hybrid Professional Recommendation Platform</div>', unsafe_allow_html=True)
+def admin_explorer_view():
+    load_css()
+    system = load_system()
+    render_user_explorer(system)
 
-# KPI Cards
-st.markdown("### 📊 Platform Key Performance Indicators")
-col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    st.metric("Total Users", f"{total_users:,}", help="Count of registered professional user profiles")
-with col2:
-    st.metric("Feedback Records", f"{total_feedback:,}", help="Historical user interactions (Accept/Reject)")
-with col3:
-    st.metric("Acceptance Rate", f"{acceptance_rate:.1f}%", help="Percentage of feedback records marked as Accept")
-with col4:
-    st.metric("Model Accuracy", f"{accuracy:.2f}%", help="Classifier accuracy evaluated on held-out test data")
-with col5:
-    st.metric("ROC AUC Score", f"{roc_auc:.4f}", help="Area under the ROC curve representing ranking power")
+def admin_analytics_view():
+    load_css()
+    system = load_system()
+    render_model_analytics(system)
 
-st.markdown("<br>", unsafe_allow_html=True)
+def admin_insights_view():
+    load_css()
+    system = load_system()
+    render_dataset_insights(system)
 
-# Pipeline Architecture Diagram
-st.markdown("### 🛠️ Multi-Stage Recommendation Pipeline Architecture")
-pipeline_html = """
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.02); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 30px;">
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            👤 User Profile
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">Raw demographic & text data</div>
-    </div>
-    <div style="font-size: 1.5rem; color: #a855f7; padding: 0 10px;">➔</div>
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #10b981, #047857); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            📝 TF-IDF Similarity
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">Cosine similarity on summaries</div>
-    </div>
-    <div style="font-size: 1.5rem; color: #a855f7; padding: 0 10px;">➔</div>
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #f59e0b, #b45309); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            ⚖️ Hybrid Recommender
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">MBTI, Skills, Intent weightings</div>
-    </div>
-    <div style="font-size: 1.5rem; color: #a855f7; padding: 0 10px;">➔</div>
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #ec4899, #be185d); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            🎯 Candidate Gen
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">Stage 1: Retrieve top 30 pool</div>
-    </div>
-    <div style="font-size: 1.5rem; color: #a855f7; padding: 0 10px;">➔</div>
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #8b5cf6, #6d28d9); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            🤖 ML Re-Ranking
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">Stage 2: Logistic Regression</div>
-    </div>
-    <div style="font-size: 1.5rem; color: #a855f7; padding: 0 10px;">➔</div>
-    <div style="text-align: center; flex: 1;">
-        <div style="background: linear-gradient(135deg, #06b6d4, #0891b2); padding: 12px; border-radius: 8px; font-weight: bold; color: white; font-size: 0.9rem;">
-            📢 Explain Match
-        </div>
-        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 5px;">Natural language justifications</div>
-    </div>
-</div>
-"""
-st.markdown(pipeline_html, unsafe_allow_html=True)
+def admin_explainability_view():
+    load_css()
+    system = load_system()
+    render_explainability(system)
 
-# Feature details in columns
-st.markdown("### 🌟 Implemented Capabilities")
-c1, c2, c3 = st.columns(3)
-with c1:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>🧠 NLP & Profile Vectorization</h3>
-        <p>Leverages TF-IDF vectorization with customized text cleaning routines (removing stopwords, punctuation, lemmatization) to represent unstructured professional summaries, bios, and career objectives in high-dimensional vector space.</p>
-        <span class="badge">TFIDFEncoder</span>
-        <span class="badge badge-blue">Cosine Similarity</span>
-    </div>
-    <div class="glass-card">
-        <h3>⚡ Multi-Stage Candidate Generation</h3>
-        <p>Combines text vector similarity, Myers-Briggs (MBTI) compatibility mapping, profession clusters, career goal alignment, location, experience levels, skills intersection, and networking intent into a single candidate retriever.</p>
-        <span class="badge badge-green">Candidate Retrieval</span>
-        <span class="badge">Hybrid Scoring</span>
-    </div>
-    """, unsafe_allow_html=True)
+def admin_status_view():
+    load_css()
+    system = load_system()
+    render_system_status(system)
 
-with c2:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>⚖️ Hybrid Matching Engines</h3>
-        <p>Analyzes demographic match values alongside text representations, calculating individual matching dimensions (MBTI compatibilities, professional fields similarity) to serve as inputs for machine learning classifiers.</p>
-        <span class="badge badge-orange">Recommender</span>
-        <span class="badge badge-blue">MBTI Engine</span>
-    </div>
-    <div class="glass-card">
-        <h3>🤖 ML Re-Ranking Model</h3>
-        <p>Uses a binary classifier trained on historical feedback (accept vs reject actions) to compute matching probabilities. The final score fuses hybrid similarity and ML probabilities to bubble up profiles with the highest conversion probability.</p>
-        <span class="badge">Logistic Regression</span>
-        <span class="badge badge-orange">Predictive Scoring</span>
-    </div>
-    """, unsafe_allow_html=True)
 
-with c3:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>📢 Explainable AI (XAI)</h3>
-        <p>Exposes complete score breakdowns and automatically drafts human-readable explanations. Transparency helps build user trust and lets administrators see exactly which compatibility factors drove the matches.</p>
-        <span class="badge badge-blue">Feature Breakdown</span>
-        <span class="badge badge-green">Explainability</span>
-    </div>
-    <div class="glass-card">
-        <h3>📊 Performance & Data Analytics</h3>
-        <p>Displays classification evaluation metrics (F1-score, Precision, Recall, Confusion Matrix) and exploratory distribution insights, giving developers and evaluators full visibility into dataset and model health.</p>
-        <span class="badge">Plotly Heatmaps</span>
-        <span class="badge badge-orange">Dataset Insights</span>
-    </div>
-    """, unsafe_allow_html=True)
+# Main Routing Loop
+def main():
+    if not st.session_state.get("authenticated", False):
+        render_login_screen()
+    else:
+        system = load_system()
+        users_df = system["users_df"]
+        
+        # Render common sidebar & retrieve portal
+        portal = render_sidebar(users_df)
+        
+        # Build Navigation Menu
+        if portal == "Admin Portal":
+            pages_list = [
+                st.Page(admin_dashboard_view, title="Dashboard", icon="📊", default=True),
+                st.Page(admin_explorer_view, title="User Explorer", icon="🔍"),
+                st.Page(admin_analytics_view, title="Model Analytics", icon="📈"),
+                st.Page(admin_insights_view, title="Dataset Insights", icon="💡"),
+                st.Page(admin_explainability_view, title="Explainability", icon="📢"),
+                st.Page(admin_status_view, title="System Status", icon="⚙️")
+            ]
+        else:
+            pages_list = [
+                st.Page(user_home_view, title="Home", icon="🏠", default=True),
+                st.Page(user_profile_view, title="My Profile", icon="👤"),
+                st.Page(user_recs_view, title="My Recommendations", icon="🎯"),
+                st.Page(user_feedback_view, title="Feedback History", icon="💬"),
+                st.Page(user_history_view, title="Recommendation History", icon="📜")
+            ]
+            
+        pg = st.navigation(pages_list)
+        pg.run()
 
-# Footer instructions
-st.markdown("""
----
-<div style='text-align: center; color: #64748b; margin-top: 20px;'>
-    <p>Use the sidebar to explore user profiles, review recommendations, and inspect model coefficients and metrics.</p>
-</div>
-""", unsafe_allow_html=True)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,12 @@
+user_id,name,profession,location,experience_years,mbti,career_goal,skills,interests,networking_intent,professional_summary,about_me,created_at
+U302,Shiva Dev,Full Stack Developer,Bengaluru,5,INTJ,AI Research,"Artificial Intelligence,
+Research,
+Technology,
+Reading,
+Open Source,
+Startups","Artificial Intelligence,
+Research,
+Technology,
+Reading,
+Open Source,
+Startups",Find Mentor,"Experienced Full Stack Developer with 5 years of experience building scalable web applications and AI-powered solutions. Skilled in Python, Machine Learning, FastAPI, Docker, SQL, and cloud technologies. Passionate about AI research, recommendation systems, and intelligent platforms. Interested in connecting with professionals working in data science, AI engineering, and research domains.","I enjoy solving real-world problems using technology and data-driven approaches. My long-term goal is to transition into advanced AI research and contribute to intelligent systems. I value continuous learning, collaboration, mentorship, and knowledge sharing. Outside of work I enjoy reading technical blogs, contributing to open-source projects, and exploring emerging AI technologies.",2026-06-15T13:23:59.406667
