@@ -114,18 +114,37 @@ def get_adaptive_recommender() -> AdaptiveRecommender:
     return AdaptiveRecommender(get_recommender(), get_feedback_model())
 
 
+class LazySystemDict(dict):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self["training_dataset"] = None
+
+    def __getitem__(self, key):
+        if key == "training_dataset":
+            val = super().__getitem__(key)
+            if val is None:
+                val = get_training_dataset()
+                super().__setitem__("training_dataset", val)
+            return val
+        return super().__getitem__(key)
+
+    def get(self, key, default=None):
+        if key == "training_dataset":
+            return self[key]
+        return super().get(key, default)
+
+
 def load_system() -> dict:
-    """Load all app-ready components in one place for Streamlit pages."""
-    return {
-        "users_df": get_users(),
-        "feedback_df": get_feedback(),
-        "vectorizer": get_vectorizer(),
-        "tfidf_matrix": get_tfidf_matrix(),
-        "recommender": get_recommender(),
-        "training_dataset": get_training_dataset(),
-        "feedback_model": get_feedback_model(),
-        "adaptive": get_adaptive_recommender(),
-    }
+    """Load all app-ready components in one place for Streamlit pages (lazy loading dataset)."""
+    system = LazySystemDict()
+    system["users_df"] = get_users()
+    system["feedback_df"] = get_feedback()
+    system["vectorizer"] = get_vectorizer()
+    system["tfidf_matrix"] = get_tfidf_matrix()
+    system["recommender"] = get_recommender()
+    system["feedback_model"] = get_feedback_model()
+    system["adaptive"] = get_adaptive_recommender()
+    return system
 
 
 def clear_system_caches() -> None:

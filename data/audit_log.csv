@@ -5,3 +5,5 @@ timestamp,user_id,event_type,details
 2026-06-15T16:19:58,Shiva_dev,LOGIN_FAILED,Username or email not found.
 2026-06-15T16:22:56,Shiva_dev,LOGIN_FAILED,Invalid password. 4 attempt(s) remaining before lockout.
 2026-06-15T16:23:14,U303,LOGIN,username=Dr_uma role=user
+2026-06-16T23:37:05,ADMIN,LOGIN,username=Prem role=admin
+2026-06-16T23:46:20,ADMIN,LOGIN,username=Prem role=admin

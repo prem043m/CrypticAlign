@@ -16,6 +16,12 @@ def ensure_nltk_resources() -> None:
     for resource_path, package_name in REQUIRED_RESOURCES:
         try:
             nltk.data.find(resource_path)
+        except LookupError:
+            try:
+                # Check for zip version specifically before cleaning up/redownloading
+                nltk.data.find(f"{resource_path}.zip")
+            except LookupError:
+                _recover_resource(package_name)
         except Exception:
             _recover_resource(package_name)
 
