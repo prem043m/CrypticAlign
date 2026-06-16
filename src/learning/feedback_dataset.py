@@ -17,8 +17,14 @@ class FeedbackDatasetBuilder:
     def build(self):
 
         rows = []
+        valid_user_ids = set(self.recommender.users_df["user_id"].values)
 
         for _, row in self.feedback_df.iterrows():
+            if (
+                row["user_id"] not in valid_user_ids
+                or row["matched_user_id"] not in valid_user_ids
+            ):
+                continue
 
             features = (
                 self.recommender.compatibility_score(
