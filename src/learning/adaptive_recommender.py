@@ -1,5 +1,5 @@
 """
-NexMatch AI — Adaptive Recommender
+nextmatchAi — Adaptive Recommender
 Wraps the core Recommender + FeedbackModel to apply:
   - ML re-ranking (60% hybrid + 40% logistic regression)
   - Phase 7.10: Recency penalty (freshness) — avoids repeatedly showing same users

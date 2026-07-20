@@ -1,5 +1,5 @@
 """
-NexMatch AI — Match Explanation Engine
+nextmatchAi — Match Explanation Engine
 Generates natural language summaries, structured reasons, shared skills,
 strengths, and weaknesses for a matched pair of users.
 

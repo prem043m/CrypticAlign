@@ -1,5 +1,5 @@
 """
-NexMatch AI — Centralized Error Handler (Phase 8.10)
+nextmatchAi — Centralized Error Handler (Phase 8.10)
 Provides safe_run() wrapper and handle_exception() for friendly UI error display.
 Logs all exceptions to audit_log.csv via audit_logger.
 """

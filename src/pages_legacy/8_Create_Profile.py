@@ -18,7 +18,7 @@ from src.utils.styles import load_css
 
 
 st.set_page_config(
-    page_title="Create Profile | NexMatch AI",
+    page_title="Create Profile | nextmatchAi",
     page_icon="🆕",
     layout="wide"
 )

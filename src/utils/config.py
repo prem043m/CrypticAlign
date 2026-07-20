@@ -7,7 +7,7 @@ load_dotenv()
 
 class Config:
     # App General settings
-    APP_NAME = os.getenv("APP_NAME", "NexMatch AI")
+    APP_NAME = os.getenv("APP_NAME", "NextMatchAI")
     APP_ENV = os.getenv("APP_ENV", "development")
     APP_VERSION = os.getenv("APP_VERSION", "1.0.0")
     
@@ -19,7 +19,7 @@ class Config:
         
     # Admin Credentials
     ADMIN_NAME = os.getenv("ADMIN_NAME", "admin")
-    ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "admin@nexmatch.ai")
+    ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "admin@nextmatchai.ai")
     ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "AdminSecurePassword2026!")
     
     # SMTP Service Settings

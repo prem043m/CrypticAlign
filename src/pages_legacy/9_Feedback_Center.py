@@ -15,7 +15,7 @@ from src.utils.styles import load_css
 
 
 st.set_page_config(
-    page_title="Feedback Center | NexMatch AI",
+    page_title="Feedback Center | nextmatchAi",
     page_icon="📝",
     layout="wide"
 )

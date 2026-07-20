@@ -1,6 +1,6 @@
-# 🔐 CrypticAlign — Intelligent Recommender System
+# � NextMatchAI
 
-> **An ML-powered professional networking recommendation engine that matches users based on multi-dimensional compatibility analysis.**
+> AI-powered professional networking recommender that helps users discover high-fit collaborators, mentors, and peers through intelligent matching.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.58-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
@@ -13,7 +13,7 @@
 
 | Section | Description |
 |---------|-------------|
-| [What is CrypticAlign?](#-what-is-crypticalign) | Project overview and motivation |
+| [What is NextMatchAI?](#-what-is-nextmatchai) | Project overview and motivation |
 | [Key Features](#-key-features) | Capabilities at a glance |
 | [Quick Start](#-quick-start) | Get running in 3 minutes |
 | [Architecture](#-architecture) | System design and pipeline |
@@ -32,17 +32,17 @@
 
 ---
 
-## 🧠 What is CrypticAlign?
+## 🧠 What is NextMatchAI?
 
-**CrypticAlign** is an intelligent recommendation system designed for professional networking platforms. It goes beyond simple keyword matching by employing a **two-stage hybrid pipeline** that combines content-based filtering with machine learning re-ranking to deliver highly relevant connection suggestions.
+NextMatchAI is a portfolio-ready recommendation system for professional networking platforms. It combines natural language processing, rule-based compatibility scoring, and machine-learning re-ranking to surface meaningful connections between professionals based on skills, experience, interests, career goals, and personality fit.
 
-The system analyzes **8 compatibility dimensions** — from text similarity and personality type to career goals and skill overlap — and learns from user feedback to continuously improve recommendation quality. Built with a production-ready Streamlit interface, it demonstrates a complete ML lifecycle from data generation to interactive deployment.
+The system evaluates multiple compatibility dimensions and continuously improves through feedback, making it suitable for real-world use cases such as mentorship discovery, collaboration matching, and career growth recommendations. Built with a Streamlit interface and modular Python architecture, the project demonstrates a complete end-to-end workflow from synthetic data generation to model evaluation and deployment.
 
 ### 🎯 Problem Statement
 
-> How can we intelligently match professionals for networking, mentorship, and collaboration — going beyond surface-level keyword matching to consider personality, career trajectory, and domain expertise?
+> How can we help professionals discover relevant connections beyond simple keyword matching, while still keeping the experience explainable, adaptive, and useful?
 
-CrypticAlign answers this with a data-driven approach that achieved a **40% → 67% acceptance rate improvement** through its adaptive feedback loop.
+NextMatchAI addresses this challenge through a data-driven approach that improved recommendation acceptance from roughly 40% to 67% through its adaptive learning loop.
 
 ---
 
@@ -89,7 +89,7 @@ streamlit run src/app.py
 
 ## 🏗️ Architecture
 
-CrypticAlign uses a **two-stage hybrid pipeline** that balances recall (finding relevant candidates) with precision (ranking them accurately):
+nextmatchAi uses a **two-stage hybrid pipeline** that balances recall (finding relevant candidates) with precision (ranking them accurately):
 
 ```
                         ┌──────────────────────────────┐
@@ -522,7 +522,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ```
 MIT License
 
-Copyright (c) 2026 CrypticAlign
+Copyright (c) 2026 nextmatchAi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -544,7 +544,7 @@ copies or substantial portions of the Software.
 | **Author** | *Your Name* |
 | **Email** | *your.email@example.com* |
 | **GitHub** | *github.com/your-username* |
-| **Project** | [CrypticAlign — Intelligent Recommender System](https://github.com/your-username/Intelligent_Recommender_System) |
+| **Project** | [nextmatchAi — Intelligent Recommender System](https://github.com/your-username/Intelligent_Recommender_System) |
 
 ---
 

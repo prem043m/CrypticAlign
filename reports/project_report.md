@@ -1,8 +1,8 @@
-# CrypticAlign — Intelligent Recommender System
+# nextmatchAi — Intelligent Recommender System
 
 ### Final Project Report
 
-**Project:** CrypticAlign — ML-Based Professional Networking Recommendation Engine  
+**Project:** nextmatchAi — ML-Based Professional Networking Recommendation Engine  
 **Type:** Two-Stage Hybrid Recommendation Pipeline with Adaptive Feedback Learning  
 **Date:** June 2026  
 
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-CrypticAlign is an intelligent professional networking recommendation system that leverages Natural Language Processing (NLP), personality profiling, and supervised machine learning to connect professionals with high-compatibility peers. The system implements a two-stage hybrid pipeline: a **Candidate Generation** stage using TF-IDF vectorization and cosine similarity to retrieve the top 30 semantically similar users, followed by an **ML Re-Ranking** stage that applies Logistic Regression over eight engineered compatibility features to produce the final top-5 ranked recommendations. Built on a synthetic dataset of 300 user profiles and 5,986 feedback records, the model achieves **69.03% accuracy** and a **ROC AUC of 0.6698**, with an acceptance rate improvement from **40% to 67%** across iterative feedback cycles. The system is deployed as a production-ready Streamlit web application with bcrypt-based authentication, audit logging, session management, and cloud deployment support via Render.com and Streamlit Cloud.
+nextmatchAi is an intelligent professional networking recommendation system that leverages Natural Language Processing (NLP), personality profiling, and supervised machine learning to connect professionals with high-compatibility peers. The system implements a two-stage hybrid pipeline: a **Candidate Generation** stage using TF-IDF vectorization and cosine similarity to retrieve the top 30 semantically similar users, followed by an **ML Re-Ranking** stage that applies Logistic Regression over eight engineered compatibility features to produce the final top-5 ranked recommendations. Built on a synthetic dataset of 300 user profiles and 5,986 feedback records, the model achieves **69.03% accuracy** and a **ROC AUC of 0.6698**, with an acceptance rate improvement from **40% to 67%** across iterative feedback cycles. The system is deployed as a production-ready Streamlit web application with bcrypt-based authentication, audit logging, session management, and cloud deployment support via Render.com and Streamlit Cloud.
 
 ---
 
@@ -80,7 +80,7 @@ There is a clear need for an intelligent recommendation system that combines sem
 
 ### 1.2 Objectives
 
-The primary objectives of the CrypticAlign system are:
+The primary objectives of the nextmatchAi system are:
 
 1. **Design and implement a hybrid recommendation pipeline** combining content-based filtering (TF-IDF cosine similarity) with supervised ML re-ranking (Logistic Regression).
 2. **Engineer a multi-dimensional compatibility scoring system** that evaluates users across eight distinct features including text similarity, MBTI personality compatibility, professional alignment, skills overlap, and networking intent.
@@ -121,7 +121,7 @@ $$\text{TF}(t, d) = \frac{f_{t,d}}{\sum_{t' \in d} f_{t',d}}$$
 
 $$\text{IDF}(t, D) = \log\frac{|D|}{|\{d \in D : t \in d\}|}$$
 
-Salton and Buckley (1988) demonstrated the effectiveness of TF-IDF in information retrieval, establishing it as a standard baseline for text vectorization [2]. In CrypticAlign, TF-IDF is applied to composite profile text (professional summary, skills, about me, education, and traits) with a vocabulary cap of 5,000 features.
+Salton and Buckley (1988) demonstrated the effectiveness of TF-IDF in information retrieval, establishing it as a standard baseline for text vectorization [2]. In nextmatchAi, TF-IDF is applied to composite profile text (professional summary, skills, about me, education, and traits) with a vocabulary cap of 5,000 features.
 
 ### 2.3 Cosine Similarity
 
@@ -129,7 +129,7 @@ Cosine similarity measures the angular distance between two vectors in high-dime
 
 $$\text{cosine}(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \cdot \|\mathbf{b}\|}$$
 
-This metric returns values in $[-1, 1]$, where 1 indicates identical orientation. In CrypticAlign, the raw cosine score is scaled to $[0, 100]$ for uniformity with other feature scores.
+This metric returns values in $[-1, 1]$, where 1 indicates identical orientation. In nextmatchAi, the raw cosine score is scaled to $[0, 100]$ for uniformity with other feature scores.
 
 ### 2.4 Logistic Regression for Classification
 
@@ -137,7 +137,7 @@ Logistic Regression models the probability of a binary outcome using the sigmoid
 
 $$P(y=1|\mathbf{x}) = \sigma(\mathbf{w}^T \mathbf{x} + b) = \frac{1}{1 + e^{-(\mathbf{w}^T \mathbf{x} + b)}}$$
 
-Hosmer, Lemeshow, and Sturdivant (2013) provide the definitive treatment of applied logistic regression, noting its interpretability and robustness on linearly separable data [3]. CrypticAlign employs Logistic Regression with `class_weight="balanced"` to address the 72:28 class imbalance in the feedback dataset.
+Hosmer, Lemeshow, and Sturdivant (2013) provide the definitive treatment of applied logistic regression, noting its interpretability and robustness on linearly separable data [3]. nextmatchAi employs Logistic Regression with `class_weight="balanced"` to address the 72:28 class imbalance in the feedback dataset.
 
 ### 2.5 MBTI Personality Framework
 
@@ -145,7 +145,7 @@ The Myers-Briggs Type Indicator (MBTI), based on Carl Jung's theory of psycholog
 
 ### 2.6 Hybrid Recommender Systems
 
-Burke (2002) introduced the taxonomy of hybrid recommender systems, identifying seven hybridization strategies [6]. CrypticAlign adopts a **weighted hybrid** approach, combining rule-based feature scores with ML-predicted acceptance probability:
+Burke (2002) introduced the taxonomy of hybrid recommender systems, identifying seven hybridization strategies [6]. nextmatchAi adopts a **weighted hybrid** approach, combining rule-based feature scores with ML-predicted acceptance probability:
 
 $$\text{Final Score} = 0.60 \times \text{Hybrid Score} + 0.40 \times \text{ML Score}$$
 
@@ -159,7 +159,7 @@ This design preserves the interpretability of domain-engineered features while a
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         CrypticAlign Architecture                          │
+│                         nextmatchAi Architecture                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌─────────────┐    ┌──────────────────────────────────────────────────┐    │
@@ -709,7 +709,7 @@ The top-3 features by coefficient magnitude — profession, career goal, and ski
 
 ### 7.1 Feedback Loop Mechanism
 
-CrypticAlign implements a closed-loop adaptive learning cycle:
+nextmatchAi implements a closed-loop adaptive learning cycle:
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -791,7 +791,7 @@ This represents a **67.5% relative improvement** over the baseline, demonstratin
 
 ### 8.1 Application Overview
 
-The CrypticAlign web application is built with **Streamlit** and organized into two primary portals:
+The nextmatchAi web application is built with **Streamlit** and organized into two primary portals:
 
 | Portal | Module | Target User | Key Functions |
 |--------|--------|-------------|---------------|
@@ -862,7 +862,7 @@ The application presents the following key interface screens:
 
 ### 9.1 Security
 
-CrypticAlign implements multiple security layers:
+nextmatchAi implements multiple security layers:
 
 | Security Feature | Implementation | Details |
 |-----------------|----------------|---------|
@@ -939,7 +939,7 @@ CrypticAlign implements multiple security layers:
 
 ## 12. Conclusion
 
-CrypticAlign demonstrates that a lightweight, interpretable hybrid recommendation system can deliver meaningful professional connection suggestions by combining domain-engineered features with adaptive machine learning. The key contributions of this project are:
+nextmatchAi demonstrates that a lightweight, interpretable hybrid recommendation system can deliver meaningful professional connection suggestions by combining domain-engineered features with adaptive machine learning. The key contributions of this project are:
 
 1. **A principled two-stage architecture** that separates the concerns of candidate retrieval (TF-IDF cosine similarity over the full user corpus) from precision ranking (Logistic Regression over 8 compatibility features), enabling both scalability and accuracy.
 
@@ -951,7 +951,7 @@ CrypticAlign demonstrates that a lightweight, interpretable hybrid recommendatio
 
 The model's current accuracy of **69.03%** and ROC AUC of **0.6698** establish a strong baseline for future work. The interpretable coefficient analysis reveals that professional alignment (profession + career goals + skills) is the dominant predictor of user acceptance, a finding that can guide both feature weight tuning and UI design decisions.
 
-While limitations exist — particularly around scalability, linear model capacity, and synthetic data — the architecture is designed for extensibility. Swapping the TF-IDF encoder for transformer embeddings, the Logistic Regression for gradient boosted trees, and the CSV storage for a database would address the primary bottlenecks while preserving the two-stage pipeline structure that is CrypticAlign's core architectural strength.
+While limitations exist — particularly around scalability, linear model capacity, and synthetic data — the architecture is designed for extensibility. Swapping the TF-IDF encoder for transformer embeddings, the Logistic Regression for gradient boosted trees, and the CSV storage for a database would address the primary bottlenecks while preserving the two-stage pipeline structure that is nextmatchAi's core architectural strength.
 
 ---
 
@@ -975,4 +975,4 @@ While limitations exist — particularly around scalability, linear model capaci
 
 ---
 
-*Report generated for CrypticAlign v1.0 — June 2026*
+*Report generated for nextmatchAi v1.0 — June 2026*

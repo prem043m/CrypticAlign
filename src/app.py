@@ -19,7 +19,7 @@ if str(project_root) not in sys.path:
 
 # Set Streamlit Page Configuration at the very first step
 st.set_page_config(
-    page_title="NexMatch AI",
+    page_title="NextMatchAI",
     page_icon=str(_LOGO_PATH) if _LOGO_PATH.exists() else "🦊",
     layout="wide",
     initial_sidebar_state="expanded"

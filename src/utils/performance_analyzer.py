@@ -6,7 +6,7 @@ import pandas as pd
 
 class PerformanceAnalyzer:
     """
-    NexMatch AI Performance Analyzer
+    nextmatchAi Performance Analyzer
 
     Tracks:
     - Accuracy
@@ -159,7 +159,7 @@ class PerformanceAnalyzer:
         report = []
 
         report.append(
-            "# NexMatch AI Performance Analysis Report\n"
+            "# nextmatchAi Performance Analysis Report\n"
         )
 
         report.append(
@@ -294,7 +294,7 @@ class PerformanceAnalyzer:
         )
 
         report.append(
-            "The NexMatch AI recommendation engine "
+            "The nextmatchAi recommendation engine "
             "combines hybrid compatibility scoring "
             "with machine-learning feedback learning. "
             "The ML re-ranking stage improves recommendation "

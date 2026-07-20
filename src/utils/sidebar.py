@@ -7,7 +7,7 @@ _LOGO_PATH = Path(__file__).resolve().parent.parent / "icon.png"
 
 def render_sidebar(users_df: pd.DataFrame):
     """
-    Renders a unified sidebar for NexMatch AI, managing the portal selector
+    Renders a unified sidebar for NextMatchAI, managing the portal selector
     and active user context based on user credentials and roles.
     """
     # Logo at top of sidebar
@@ -15,7 +15,7 @@ def render_sidebar(users_df: pd.DataFrame):
         st.sidebar.image(str(_LOGO_PATH), width=56)
     st.sidebar.markdown("""
     <div style='text-align: center; margin-bottom: 20px;'>
-        <h2 style='margin-bottom: 0px;'>NexMatch AI</h2>
+        <h2 style='margin-bottom: 0px;'>NextMatchAI</h2>
         <small style='color: #94a3b8;'>v1.0.6 | Production Ready</small>
     </div>
     """, unsafe_allow_html=True)

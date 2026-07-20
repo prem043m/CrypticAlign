@@ -1,8 +1,8 @@
-# CrypticAlign — Full Project Architecture and Deep Execution Flow
+# nextmatchAi — Full Project Architecture and Deep Execution Flow
 
 ## 1. Project Identity
 
-**CrypticAlign** (also known as **NexMatch AI**) is an ML-based professional networking recommender system. It is not a pure collaborative-filtering recommender and not a deep learning recommender. Its current design is a **two-stage hybrid recommendation pipeline**:
+**nextmatchAi** (also known as **nextmatchAi**) is an ML-based professional networking recommender system. It is not a pure collaborative-filtering recommender and not a deep learning recommender. Its current design is a **two-stage hybrid recommendation pipeline**:
 
 1. **Stage 1: Hybrid candidate generation** — rule-based multi-factor scoring combined with TF-IDF text similarity
 2. **Stage 2: ML-based re-ranking** — Logistic Regression classifier trained on user feedback to predict match acceptance
@@ -742,7 +742,7 @@ This project is a **hardened, deployment-ready hybrid ML recommender prototype**
 
 ### Conclusion
 
-CrypticAlign successfully demonstrates that a lightweight two-stage hybrid recommender — combining rule-based feature engineering with a supervised ML classifier trained on user feedback — can produce measurably better recommendations than a static scoring engine alone. The feedback loop improves acceptance rate from approximately 43% to 67%, a **55.8% relative improvement**, proving the system's ability to learn from user behavior and adapt its recommendations over time.
+nextmatchAi successfully demonstrates that a lightweight two-stage hybrid recommender — combining rule-based feature engineering with a supervised ML classifier trained on user feedback — can produce measurably better recommendations than a static scoring engine alone. The feedback loop improves acceptance rate from approximately 43% to 67%, a **55.8% relative improvement**, proving the system's ability to learn from user behavior and adapt its recommendations over time.
 
 ---
 

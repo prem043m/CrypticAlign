@@ -288,7 +288,7 @@ def render_user_home(system):
         st.download_button(
             label="📥 Export Profiles to CSV",
             data=csv_data,
-            file_name="nexmatch_profiles_export.csv",
+            file_name="NextMatchAI_profiles_export.csv",
             mime="text/csv",
             key="download_profiles_btn"
         )
@@ -404,7 +404,7 @@ def render_user_profile(system):
     # Phase 8.13 — Notification Preferences
     st.markdown("---")
     st.markdown("### 🔔 Notification Preferences")
-    st.caption("Control which emails and notifications you receive from NexMatch AI.")
+    st.caption("Control which emails and notifications you receive from NextMatchAI.")
 
     # Load current preferences from profile (default True if not set)
     pref_welcome = bool(user_row.get("notif_welcome", True))

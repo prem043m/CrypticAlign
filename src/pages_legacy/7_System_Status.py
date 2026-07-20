@@ -17,7 +17,7 @@ MODEL_DIR = project_root / "models"
 
 
 st.set_page_config(
-    page_title="System Status | NexMatch AI",
+    page_title="System Status | nextmatchAi",
     page_icon="🛠️",
     layout="wide"
 )

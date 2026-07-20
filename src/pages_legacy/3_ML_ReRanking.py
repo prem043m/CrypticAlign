@@ -15,7 +15,7 @@ from src.utils.data_manager import append_feedback
 
 # Page Configuration
 st.set_page_config(
-    page_title="ML Re-Ranking | NexMatch AI",
+    page_title="ML Re-Ranking | nextmatchAi",
     page_icon="🤖",
     layout="wide"
 )
@@ -183,7 +183,7 @@ st.markdown("""
 <div class="glass-card" style="background: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.05);">
     <h3 style="color: #60a5fa; margin-bottom: 15px;">💡 Industry System Design Insight: Two-Stage Recommendation Architecture</h3>
     <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
-        NexMatch AI implements a standard industry <b>two-stage recommendation system</b> (similar to architectures deployed at Netflix, YouTube, and LinkedIn):
+        nextmatchAi implements a standard industry <b>two-stage recommendation system</b> (similar to architectures deployed at Netflix, YouTube, and LinkedIn):
     </p>
     <ol style="padding-left: 20px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
         <li style="margin-bottom: 8px;">

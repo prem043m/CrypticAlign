@@ -13,7 +13,7 @@ from src.utils.styles import load_css
 
 # Page Configuration
 st.set_page_config(
-    page_title="User Explorer | NexMatch AI",
+    page_title="User Explorer | nextmatchAi",
     page_icon="👤",
     layout="wide"
 )

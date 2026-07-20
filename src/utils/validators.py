@@ -1,5 +1,5 @@
 """
-NexMatch AI — Input Validation Module
+nextmatchAi — Input Validation Module
 Provides field-level and profile-level validation for registration and profile updates.
 """
 

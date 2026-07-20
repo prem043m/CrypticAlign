@@ -1,5 +1,5 @@
 """
-CrypticAlign / NexMatch AI — Performance Analyzer Report Maker
+nextmatchAi / nextmatchAi — Performance Analyzer Report Maker
 
 This script records multiple training iterations to demonstrate how the
 recommendation system improved over time through feedback learning and
@@ -108,7 +108,7 @@ def main() -> None:
 
     # -- Print the improvement journey -----------------------
     print("=" * 64)
-    print("  CrypticAlign / NexMatch AI - Improvement Journey")
+    print("  nextmatchAi / nextmatchAi - Improvement Journey")
     print("=" * 64)
 
     for entry in ITERATIONS:

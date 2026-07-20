@@ -23,7 +23,7 @@ from src.utils.styles import load_css
 
 # Page Configuration
 st.set_page_config(
-    page_title="Model Analytics | NexMatch AI",
+    page_title="Model Analytics | nextmatchAi",
     page_icon="📊",
     layout="wide"
 )

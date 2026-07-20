@@ -1,6 +1,6 @@
-# 🚀 CrypticAlign — Deployment Guide
+# 🚀 NextMatchAI — Deployment Guide
 
-> **Complete deployment reference for CrypticAlign (NexMatch AI), the Intelligent Hybrid Professional Recommendation Platform.**
+> **Complete deployment reference for NextMatchAI, the intelligent professional networking recommendation platform.**
 
 ---
 
@@ -32,7 +32,7 @@
 
 **Windows (PowerShell)**
 ```powershell
-git clone https://github.com/prem043m/CrypticAlign.git
+git clone https://github.com/prem043m/nextmatchAi.git
 cd Intelligent_Recommender_System
 python -m venv .ipenv
 .ipenv\Scripts\Activate.ps1
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 **macOS / Linux**
 ```bash
-git clone https://github.com/prem043m/CrypticAlign.git
+git clone https://github.com/prem043m/nextmatchAi.git
 cd Intelligent_Recommender_System
 python3 -m venv .ipenv
 source .ipenv/bin/activate
@@ -91,7 +91,7 @@ All configuration is managed through environment variables. Copy `.env.example` 
 
 | Variable | Default | Required | Description |
 |----------|---------|----------|-------------|
-| `APP_NAME` | `NexMatch AI` | No | Display name shown in the UI header |
+| `APP_NAME` | `nextmatchAi` | No | Display name shown in the UI header |
 | `APP_ENV` | `development` | No | Environment identifier (`development` / `production`) |
 | `APP_VERSION` | `1.0.0` | No | Application version string |
 | `SECRET_KEY` | `auto` | **Yes** | Secret key for token signing & session security. Use a random 32+ character hex string in production |
@@ -139,7 +139,7 @@ All configuration is managed through environment variables. Copy `.env.example` 
 
 ## ☁️ 3. Streamlit Community Cloud
 
-The simplest way to deploy CrypticAlign for free.
+The simplest way to deploy nextmatchAi for free.
 
 ### Step-by-Step
 
@@ -154,7 +154,7 @@ The simplest way to deploy CrypticAlign for free.
 
 4. **Configure Secrets** (Advanced Settings → Secrets):
    ```toml
-   APP_NAME = "CrypticAlign"
+   APP_NAME = "nextmatchAi"
    APP_ENV = "production"
    SECRET_KEY = "your-random-hex-key-at-least-32-characters"
 
@@ -230,7 +230,7 @@ Create a `Dockerfile` in the project root:
 
 ```dockerfile
 # ──────────────────────────────────────────────
-# CrypticAlign (NexMatch AI) — Production Image
+# nextmatchAi (nextmatchAi) — Production Image
 # ──────────────────────────────────────────────
 FROM python:3.11-slim
 
@@ -280,18 +280,18 @@ CMD ["streamlit", "run", "src/app.py", \
 
 ```bash
 # Build the image
-docker build -t crypticalign:latest .
+docker build -t nextmatchai:latest .
 
 # Run with environment variables
 docker run -d \
-  --name crypticalign \
+  --name nextmatchai \
   -p 8501:8501 \
   -e SECRET_KEY="your-production-secret-key" \
   -e ADMIN_NAME="admin" \
   -e ADMIN_EMAIL="admin@yourdomain.com" \
   -e ADMIN_PASSWORD="YourSecurePassword123!" \
   -e ENABLE_EMAILS="false" \
-  crypticalign:latest
+  nextmatchai:latest
 ```
 
 Access at: **http://localhost:8501**
@@ -304,9 +304,9 @@ Create a `docker-compose.yml` for easier management:
 version: "3.9"
 
 services:
-  crypticalign:
+  nextmatchai:
     build: .
-    container_name: crypticalign
+    container_name: nextmatchai
     ports:
       - "8501:8501"
     env_file:
@@ -337,7 +337,7 @@ docker-compose up -d
 
 ## 📧 6. Gmail SMTP Setup
 
-CrypticAlign uses SMTP to send welcome emails and password reset tokens. Gmail is the default and recommended provider.
+nextmatchAi uses SMTP to send welcome emails and password reset tokens. Gmail is the default and recommended provider.
 
 ### Step-by-Step Configuration
 
@@ -348,7 +348,7 @@ CrypticAlign uses SMTP to send welcome emails and password reset tokens. Gmail i
 2. **Generate an App Password**
    - Go to: [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
    - Select app: **Mail**
-   - Select device: **Other** (enter "CrypticAlign")
+   - Select device: **Other** (enter "nextmatchAi")
    - Click **Generate** — copy the 16-character password
 
 3. **Update your `.env` file:**
@@ -378,7 +378,7 @@ CrypticAlign uses SMTP to send welcome emails and password reset tokens. Gmail i
 
 ## 🔒 7. Security Notes
 
-CrypticAlign implements multiple layers of security. Review and enforce these in production:
+nextmatchAi implements multiple layers of security. Review and enforce these in production:
 
 ### Authentication & Password Security
 
@@ -474,7 +474,7 @@ Use this for load balancer health probes, Docker `HEALTHCHECK`, and uptime monit
 
 ### Audit Logging
 
-CrypticAlign logs security-relevant events to `data/audit_log.csv`:
+nextmatchAi logs security-relevant events to `data/audit_log.csv`:
 
 | Event Type | Description |
 |------------|-------------|
@@ -521,6 +521,6 @@ Access the audit log via:
 ---
 
 <p align="center">
-  <strong>CrypticAlign (NexMatch AI)</strong> — Intelligent Hybrid Professional Recommendation Platform<br/>
+  <strong>nextmatchAi (nextmatchAi)</strong> — Intelligent Hybrid Professional Recommendation Platform<br/>
   <em>Built with Streamlit · scikit-learn · NLTK · Pandas · bcrypt</em>
 </p>

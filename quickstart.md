@@ -1,4 +1,4 @@
-# 🚀 Quick Start Guide — CrypticAlign (NexMatch AI)
+# 🚀 Quick Start Guide — NextMatchAI
 
 > **Get the Intelligent Hybrid Professional Recommendation System running locally in under 5 minutes.**
 
@@ -22,8 +22,8 @@ Before you begin, make sure the following are installed on your machine:
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/prem043m/CrypticAlign.git
-cd Intelligent_Recommender_System
+git clone https://github.com/prem043m/NextMatch_AI.git
+cd NextMatch_AI
 ```
 
 ---
@@ -94,7 +94,7 @@ Open `.env` in your editor and set at minimum:
 
 ```dotenv
 ADMIN_NAME=admin
-ADMIN_EMAIL=admin@nexmatch.ai
+ADMIN_EMAIL=admin@nextmatchai.ai
 ADMIN_PASSWORD=YourSecurePassword123!
 SECRET_KEY=your-random-hex-key-32-chars
 ```
@@ -354,6 +354,6 @@ Intelligent_Recommender_System/
 ---
 
 <p align="center">
-  <strong>CrypticAlign (NexMatch AI)</strong> — Intelligent Hybrid Professional Recommendation Platform<br/>
+  <strong>nextmatchAi (nextmatchAi)</strong> — Intelligent Hybrid Professional Recommendation Platform<br/>
   <em>Built with Streamlit · scikit-learn · NLTK · Pandas</em>
 </p>

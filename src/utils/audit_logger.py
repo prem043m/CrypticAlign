@@ -1,5 +1,5 @@
 """
-NexMatch AI — Audit Logger (Phase 8.7)
+nextmatchAi — Audit Logger (Phase 8.7)
 Appends structured event records to data/audit_log.csv.
 
 Supported event types:

@@ -14,7 +14,7 @@ from src.utils.styles import load_css
 
 # Page Configuration
 st.set_page_config(
-    page_title="Dataset Insights | NexMatch AI",
+    page_title="Dataset Insights | nextmatchAi",
     page_icon="📊",
     layout="wide"
 )

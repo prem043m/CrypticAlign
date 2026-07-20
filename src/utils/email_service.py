@@ -114,7 +114,7 @@ def send_match_notification_email(name: str, email: str, matched_name: str) -> b
         <h2>Great News!</h2>
         <p>Hello {name},</p>
         <p>You have a new accepted connection match recommendation with <strong>{matched_name}</strong>!</p>
-        <p>Log back into NexMatch AI to view contact details or exchange messages.</p>
+        <p>Log back into nextmatchAi to view contact details or exchange messages.</p>
         <br>
         <p>Best regards,</p>
         <p>The {Config.APP_NAME} Team</p>

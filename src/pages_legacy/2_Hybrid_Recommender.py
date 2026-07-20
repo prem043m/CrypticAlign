@@ -13,7 +13,7 @@ from src.utils.styles import load_css
 
 # Page Configuration
 st.set_page_config(
-    page_title="Hybrid Recommender | NexMatch AI",
+    page_title="Hybrid Recommender | nextmatchAi",
     page_icon="⚖️",
     layout="wide"
 )
