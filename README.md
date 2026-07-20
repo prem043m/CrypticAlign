@@ -541,8 +541,8 @@ copies or substantial portions of the Software.
 
 | | |
 |---|---|
-| **Author** | *Your Name* |
-| **Email** | *your.email@example.com* |
+| **Author** | *Prem Mahaveer Kamble* |
+| **Email** | *premkamble8752@gmail.com* |
 | **GitHub** | *github.com/your-username* |
 | **Project** | [nextmatchAi — Intelligent Recommender System](https://github.com/your-username/Intelligent_Recommender_System) |
 
@@ -550,8 +550,8 @@ copies or substantial portions of the Software.
 
 <div align="center">
 
-**Built with 🧠 Machine Learning · 📊 Data Science · ❤️ Passion**
+**Built with 🧠 Machine Learning · ❤️ Passion**
 
-*Last Updated: June 2026*
+*Last Updated: jully 2026*
 
 </div>
